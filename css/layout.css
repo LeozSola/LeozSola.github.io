@@ -128,6 +128,46 @@ header .scrolldown a {
 }
 header .scrolldown a:hover { color: #FA8334; }
 
+/* 1. Remove the default “row” cap */
+.photography-row {
+   max-width: none !important;
+   width: 100% !important;
+ }
+ 
+ /* 2. Make the gallery wrapper fluid */
+/* center the photography gallery wrapper */
+/* ------------------------------------------------------------------
+   Photography Grid - always 3 images per row, fluid width
+   ------------------------------------------------------------------ */
+   #photography-wrapper{
+      /* turn the gallery into a real grid */
+      display:grid;
+    
+      /* three equal columns that shrink & grow with the viewport   */
+      grid-template-columns:repeat(3,minmax(0,1fr));
+    
+      /* space between pictures                                      */
+      gap:20px;
+    
+      /* let the grid stretch to the full width of the section       */
+      width:100%;
+      max-width:100%;
+    
+      /* centre the whole grid block in its parent                   */
+      margin:0 auto;
+    
+      /* optional – centres each image inside its cell               */
+      justify-items:center;
+    }
+    
+    /* make sure every photo scales with its cell                    */
+    #photography-wrapper img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    
+
 /* primary navigation
 --------------------------------------------------------------------- */
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
@@ -1013,3 +1053,34 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 #go-top a:hover { background-color: #0F9095; }
 
+/* photography modals: no scroll, no extra white space, height=90vh */
+/* center only the photography pop‑ups, not the portfolio ones */
+.mfp-wrap .mfp-content:has(.popup-modal[id^="photo-modal-"]) {
+   text-align: center !important;
+ }
+ 
+ 
+ /* 2. Make only photo‑modals shrink‑wrap their content, transparent bg */
+ .mfp-wrap .popup-modal[id^="photo-modal-"] {
+   display: inline-block !important;
+   width: auto !important;
+   max-width: none !important;
+   margin: 0 !important;
+   background: transparent !important;
+   padding: 0 !important;
+   overflow: visible !important;
+ }
+ 
+ /* 3. Fill 90% viewport height, preserve aspect ratio */
+/* photography pop‑ups: never distort aspect ratio, fit within viewport */
+.mfp-wrap .popup-modal[id^="photo-modal-"] img {
+   display: block;
+   margin: 0 auto;
+   max-width: 90vw;   /* never wider than 90% of viewport width */
+   max-height: 90vh;  /* never taller than 90% of viewport height */
+   width: auto;       /* let browser calculate width to preserve ratio */
+   height: auto;      /* let browser calculate height to preserve ratio */
+ }
+ 
+ 
+ 
