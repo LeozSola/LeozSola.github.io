@@ -461,8 +461,8 @@ ul#nav li.current a { color: #7bc951; }
 
 #portfolio {
    background: #ebeeee;
-   padding-top: 90px;
-   padding-bottom: 60px;
+   padding-top: 75px;
+   padding-bottom: 100px;
 }
 #portfolio h1 {
    font: 15px/24px 'opensans-semibold', sans-serif;
@@ -474,7 +474,7 @@ ul#nav li.current a { color: #7bc951; }
 }
 
 /* Portfolio Content */
-#portfolio-wrapper .columns { margin-bottom: 36px; }
+#portfolio-wrapper .columns { margin-bottom: 20px; }
 .portfolio-item .item-wrap {
    background: #fff;
    overflow: hidden;
@@ -1083,10 +1083,29 @@ footer .social-links li:first-child { margin-left: 0; }
  }
  
  
- #portfolio {
-   padding-top: 10px !important;   /* or whatever you prefer */
- }
+ 
  
  #portfolio h1 {
    margin-top: 0 !important;       /* kill the default h1 top‐margin */
  } 
+
+/* ── Masonry‑style 3‑column layout for Photography ── */
+#photography-wrapper {
+   /* drop grid */
+   /* display: grid; … */
+   /* use CSS columns instead */
+   column-count: 2;
+   column-gap: 0px;   /* horizontal gutter */
+ }
+ 
+ /* make each photo item flow like a “brick” */
+ #photography-wrapper .portfolio-item {
+   display: inline-block;
+   width: 100%;
+   margin: 0 0 30px;               /* vertical gutter = 20px below each image */
+   break-inside: avoid-column;     /* don’t split an item between columns */
+   -webkit-column-break-inside: avoid;
+ }
+ 
+ /* images already set to width:100%; height:auto; */
+ 
