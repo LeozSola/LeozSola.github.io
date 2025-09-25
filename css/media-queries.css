@@ -1,382 +1,224 @@
-/* ==================================================================
+/*
+=====================================================================
+*   Leonardo Sola Portfolio - Media Queries
+=====================================================================
+*/
 
-*   Ceevee Media Queries
-*   url: styleshout.com
-*   03-18-2014
-
-/* ================================================================== */
-
-
-/* screenwidth less than 1024px
---------------------------------------------------------------------- */
-@media only screen and (max-width: 1024px) {
-
-    /* header styles
-   ------------------------------------------------------------------ */
-   header .banner-text h1 {
-      font: 80px/1.1em 'opensans-bold', sans-serif;
-      letter-spacing: -1px;
-      margin: 0 auto 12px auto;
-   }
-
+@media (max-width: 1280px) {
+  header#home .banner-text {
+    max-width: 680px;
+  }
 }
 
-/* screenwidth less than 900px
---------------------------------------------------------------------- */
-@media only screen and (max-width: 900px) {
-
-    /* header styles
-   ------------------------------------------------------------------ */
-   header .banner { padding-bottom: 12px; }
-   header .banner-text h1 {
-      font: 78px/1.1em 'opensans-bold', sans-serif;
-      letter-spacing: -1px;      
-   }
-   header .banner-text h3 {
-      font: 17px/1.9em 'librebaskerville-regular', serif;
-      width: 80%;
-   }
-   header .banner-text hr {
-      width: 65%;
-      margin: 12px auto;
-   }
-   /* nav-wrap */
-   #nav-wrap {
-      font: 11px 'opensans-bold', sans-serif;
-      letter-spacing: 1.5px;
-   }
-
-
-   /* About Section
-   ------------------------------------------------------------------- */
-   #about .profile-pic {
-      width: 114px;
-      height: 114px;
-      margin-left: 12px;
-   }
-   #about .contact-details { width: 50%; }
-   #about .download { width: 50%; }
-
-   /* Resume Section
-   ------------------------------------------------------------------- */
-   #resume h1 { font: 16px/24px 'opensans-bold', sans-serif; }
-   #resume .main-col { padding-right: 5%; }   
-
-   /* Testimonials Section
-   ------------------------------------------------------------------- */
-   #testimonials .header-col h1:before {
-      font-size: 66px;
-      line-height: 66px;
-   }
-   #testimonials blockquote p {
-      font-size: 22px;
-      line-height: 46px;      
-   }
-
-    /* Call to Action Section
-   ------------------------------------------------------------------- */
-   #call-to-action .header-col h1:before {
-      font-size: 66px;
-      line-height: 66px;
-   }
-
-   /* Contact Section
-   ------------------------------------------------------------------- */
-   #contact .section-head { margin-bottom: 30px; }
-   #contact .header-col h1:before {
-      font-size: 66px;
-      line-height: 66px;
-   }
-   #contact .section-head p.lead { font: 17px/33px opensans-light, sans-serif; }
-
-
+@media (max-width: 1100px) {
+  #photography-wrapper {
+    column-count: 2;
+  }
 }
 
-/* mobile wide/smaller tablets
----------------------------------------------------------------------- */
+@media (max-width: 980px) {
+  #nav-wrap {
+    top: 1rem;
+    margin-bottom: clamp(1.8rem, 4vw, 2.4rem);
+  }
 
-@media only screen and (max-width: 767px) {
+  .portfolio-site .three.columns,
+  .portfolio-site .four.columns,
+  .portfolio-site .five.columns,
+  .portfolio-site .six.columns,
+  .portfolio-site .seven.columns,
+  .portfolio-site .eight.columns,
+  .portfolio-site .nine.columns {
+    grid-column: span 12;
+  }
 
-   /* mobile navigation
-   -------------------------------------------------------------------- */
-   #nav-wrap {
-      font: 12px 'opensans-bold', sans-serif;
-      background: transparent !important;
-      letter-spacing: 1.5px;  
-      width: auto;
-      position: fixed;
-      top: 0;
-      right: 0;
-   }
-   #nav-wrap > a {
-	   width: 48px;
-		height: 48px;
-		text-align: left;
-		background-color: #CC5200;
-		position: relative;
-      border: none;
-      float: right;
+  #about .columns.download {
+    justify-content: flex-start;
+  }
 
-      font: 0/0 a;
-      text-shadow: none;
-      color: transparent;
+  #resume .header-col {
+    grid-column: span 12;
+    margin-bottom: 1.6rem;
+  }
 
-      position: relative;
-      top: 0px;
-      right: 30px;
-   }
+  #resume .main-col {
+    grid-column: span 12;
+    padding: clamp(2rem, 4vw, 2.6rem);
+  }
 
-	#nav-wrap > a:before,
-   #nav-wrap > a:after {
-	   position: absolute;
-		border: 2px solid #fff;
-		top: 35%;
-		left: 25%;
-		right: 25%;
-		content: '';
-	}
-   #nav-wrap > a:after { top: 60%; }
+  #resume .main-col::before {
+    left: clamp(0.9rem, 2vw, 1.2rem);
+  }
 
-   /* toggle buttons */
-	#nav-wrap:not( :target ) > a:first-of-type,
-	#nav-wrap:target > a:last-of-type  {
-	   display: block;
-	}
+  #resume .row.item,
+  #resume .row.skill .main-col {
+    padding-left: clamp(2.1rem, 4vw, 2.6rem);
+  }
 
-   /* hide menu panel */
-   #nav-wrap ul#nav {
-      height: auto;
-		display: none;
-      clear: both;
-      width: auto; 
-      float: right;     
+  #resume .row.item::before,
+  #resume .row.skill .main-col h3::before {
+    left: calc(clamp(0.7rem, 2vw, 1rem));
+  }
 
-      position: relative;
-      top: 12px;
-      right: 0;
-   }
+  #contact .eight.columns,
+  #contact aside.footer-widgets {
+    grid-column: span 12;
+  }
 
-   /* display menu panels */
-	#nav-wrap:target > ul#nav	{
-	   display: block;
-      padding: 30px 20px 48px 20px;
-      background: #1f2024;
-      margin: 0 30px;
-      clear: both;
-   }
-
-   ul#nav li {
-      display: block;
-      height: auto;      
-      margin: 0 auto; 
-      padding: 0 4%;           
-      text-align: left;
-      border-bottom: 1px solid #2D2E34;
-      border-bottom-style: dotted; 
-   }
-  
-   ul#nav li a {  
-      display: block;    
-      margin: 0;
-      padding: 0;      
-      margin: 12px 0; 
-      line-height: 16px; /* reset line-height from 48px */
-      border: none;
-   }  
-
-
-   /* Header Styles
-   -------------------------------------------------------------------- */
-   header .banner {
-      padding-bottom: 12px;
-      padding-top: 6px;
-   }
-   header .banner-text h1 { font: 68px/1.1em 'opensans-bold', sans-serif; }
-   header .banner-text h3 {
-      font: 16px/1.9em 'librebaskerville-regular', serif;
-      width: 85%;
-   }
-   header .banner-text hr {
-      width: 80%;
-      margin: 18px auto;
-   }
-
-   /* header social links */
-   header .social {
-      margin: 18px 0 24px 0;
-      font-size: 24px;
-      line-height: 36px;      
-   }
-   header .social li { margin: 0 10px; }
-
-    /* scrolldown link */
-   header .scrolldown { display: none; }
-
-
-   /* About Section
-   -------------------------------------------------------------------- */
-   #about .profile-pic { display: none; }
-   #about .download .button {
-      width: 100%;
-      text-align: center;
-      padding: 15px 20px;
-   }
-   #about .main-col { padding-right: 30px; }
-
-
-   /* Resume Section
-   --------------------------------------------------------------------- */
-   #resume .header-col {
-      padding-top: 0;
-      margin-bottom: 48px;
-      text-align: center;
-   }
-   #resume h1 { letter-spacing: 3px; }
-   #resume .main-col { padding-right: 30px; }
-   #resume h3, #resume .info { text-align: center; }
-      
-   .bars { width: 100%; }
-
-
-   /* Call To Action Section
-   /* ----------------------------------------------------------------- */
-   #call-to-action { text-align: center; }
-   #call-to-action h1 {
-      font: 16px/24px 'opensans-bold', sans-serif;
-      text-align: center;
-      margin-bottom: 30px;
-      text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-   }
-   #call-to-action h1 span { display: block; }
-   #call-to-action .header-col h1:before { content: none; }
-   #call-to-action p { font-size: 15px; }
-
-
-   /* Portfolio Section
-   /* ----------------------------------------------------------------- */
-   #portfolio-wrapper .columns { margin-bottom: 40px; }
-   .popup-modal {	max-width: 85%; }
-
-
-   /* Testimonials Section
-   ----------------------------------------------------------------------- */
-   #testimonials .text-container { text-align: center; }
-   #testimonials h1 {
-      font: 16px/24px 'opensans-bold', sans-serif;
-      text-align: center;
-      margin-bottom: 30px;
-      text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-   }
-   #testimonials h1 span { display: block; }
-   #testimonials .header-col h1:before { content: none; }
-   #testimonials blockquote { padding-bottom: 24px; }
-   #testimonials blockquote p {
-      font-size: 20px;
-      line-height: 42px;      
-   }
-
-   /* Control Nav */
-   .flex-control-nav {
-      text-align: center;
-      margin-left: -30px;
-   }
-
-
-   /* contact Section
-   ----------------------------------------------------------------------- */
-   #contact { padding-bottom: 66px; }
-   #contact .section-head { margin-bottom: 12px; }
-   #contact .section-head h1 {
-      font: 16px/24px 'opensans-bold', sans-serif;            
-      text-align: center;   
-      margin-bottom: 30px;
-      text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-   }  
-   #contact h1 span { display: block; }
-   #contact .header-col { padding-top: 0; }
-   #contact .header-col h1:before { content: none;	}
-   #contact .section-head p.lead { text-align: center;}
-
-   /* form */
-   #contact label {
-      float: none;
-      width: 100%;
-   }
-   #contact input,
-   #contact textarea,
-   #contact select {
-     	margin-bottom: 6px;    	
-      width: 100%;
-   }
-   #contact button.submit { margin: 30px 0 24px 0; }
-   #message-warning, #message-success {
-      width: 100%;
-      margin-left: 0;
-   }
-
-
-   /* footer
-   ------------------------------------------------------------------------ */
-  
-   /* copyright */
-   footer .copyright li:before { content: none; }
-   footer .copyright li { margin-right: 12px; }
-
-   /* social links */
-   footer .social-links { font-size: 22px; }
-   footer .social-links li { margin-left: 18px; }
-
-   /* Go To Top Button */
-   #go-top { margin-left: -22px; }
-   #go-top a {
-   	width: 54px;
-   	height: 54px;
-      font-size: 18px;
-      line-height: 54px;
-   }
-
-
+  #contact aside.footer-widgets {
+    margin-top: 1.6rem;
+  }
 }
 
-/* mobile narrow
-  -------------------------------------------------------------------------- */
+@media (max-width: 820px) {
+  header#home .banner {
+    justify-content: center;
+  }
 
-@media only screen and (max-width: 480px) {
+  header#home .banner-text {
+    text-align: center;
+  }
 
-   /* mobile navigation
-   -------------------------------------------------------------------- */
-   #nav-wrap ul#nav { width: auto; float: none; }
+  header#home .banner-text h3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-   /* header styles
-   -------------------------------------------------------------------- */
-   header .banner { padding-top: 24px; }
-   header .banner-text h1 {
-      font: 40px/1.1em 'opensans-bold', sans-serif;      
-      margin: 0 auto 24px auto;
-   }
-   header .banner-text h3 {
-      font: 14px/1.9em 'librebaskerville-regular', sans-serif;
-      width: 90%;
-   }
-  
-   /* header social links */
-   header .social { font-size: 20px;}
-   header .social li { margin: 0 6px; }
+  header#home .social {
+    justify-content: center;
+  }
 
-   /* footer
-   ------------------------------------------------------------------------ */
+  header#home .scrolldown {
+    bottom: clamp(1.6rem, 4vw, 2.4rem);
+  }
 
-   /* social links */
-   footer .social-links { font-size: 20px; }
-   footer .social-links li { margin-left: 14px; }   
+  #portfolio-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 
+  #photography-wrapper {
+    column-count: 2;
+  }
+
+  #contactForm {
+    padding: clamp(1.6rem, 4vw, 2rem);
+  }
+
+  footer .social-links {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  #go-top {
+    position: static;
+    transform: none;
+    margin-top: 2.2rem;
+  }
+
+  #go-top a {
+    transform: none;
+  }
 }
 
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
 
+  section {
+    padding: clamp(3.5rem, 10vw, 5rem) 0;
+  }
 
+  #nav-wrap {
+    padding: 0.35rem 1rem;
+  }
 
+  #nav li a {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+  }
 
+  header#home {
+    padding: clamp(2.4rem, 8vw, 3.4rem) 0 clamp(4rem, 9vw, 5rem);
+  }
 
+  header#home .banner-text {
+    padding: clamp(1.6rem, 5vw, 2.4rem);
+  }
 
+  #about .profile-pic {
+    max-width: 260px;
+    margin-bottom: 1.8rem;
+  }
 
+  #about .columns.download {
+    justify-content: center;
+  }
 
+  #resume .row.item,
+  #resume .row.skill .main-col {
+    padding-left: 2rem;
+  }
+
+  #resume .row.item::before {
+    left: 0.75rem;
+  }
+
+  #contact aside.footer-widgets {
+    padding: clamp(1.4rem, 5vw, 1.8rem);
+  }
+
+  #portfolio-wrapper .link-icon {
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 14px;
+  }
+
+  #portfolio-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  #photography-wrapper {
+    column-count: 1;
+  }
+
+  header#home .banner-text h1 {
+    font-size: clamp(2.6rem, 11vw, 3.4rem);
+  }
+
+  header#home .banner-text h3 {
+    font-size: 1rem;
+  }
+
+  #contact .lead {
+    padding: clamp(1.2rem, 5vw, 1.6rem);
+  }
+
+  .button,
+  button {
+    width: 100%;
+  }
+
+  #contactForm button.submit {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
