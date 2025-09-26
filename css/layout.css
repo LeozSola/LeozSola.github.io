@@ -430,6 +430,7 @@ header#home .scrolldown a:hover::after {
   justify-content: flex-end;
   margin-left: auto;
   margin-top: -30px;
+  margin-right: 60px;
 }
 
 #about .resume-button {
@@ -780,22 +781,93 @@ header#home .scrolldown a:hover::after {
 }
 
 #photography-wrapper .item-wrap {
-  border-radius: var(--radius-md);
+  position: relative;
   overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: rgba(8, 12, 24, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 18px 45px rgba(4, 8, 18, 0.55);
+  box-shadow: 0 22px 48px rgba(4, 8, 18, 0.6);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 #photography-wrapper img {
   display: block;
   width: 100%;
   height: auto;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.45s ease, filter 0.45s ease;
 }
 
 #photography-wrapper .item-wrap:hover img {
-  transform: scale(1.04);
+  transform: scale(1.05);
   filter: saturate(1.1);
+}
+
+/* Centered overlay redesign for photography cards */
+#photography-wrapper .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+  background: linear-gradient(
+    180deg,
+    rgba(6, 10, 22, 0.2) 0%,
+    rgba(6, 12, 24, 0.66) 70%,
+    rgba(6, 12, 24, 0.78) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+#photography-wrapper .portfolio-item-meta {
+  color: var(--text-primary);
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.45));
+}
+
+#photography-wrapper .portfolio-item-meta h5 {
+  margin: 0;
+  padding: 0.4rem 0.8rem;
+  font-size: clamp(1.05rem, 2.6vw, 1.25rem);
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  border-radius: 999px;
+  background: rgba(8, 12, 24, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#photography-wrapper .link-icon {
+  position: absolute;
+  bottom: 0.9rem;
+  right: 0.9rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 12, 24, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--accent);
+  font-size: 0.95rem;
+  transform: translateY(6px);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+#photography-wrapper .item-wrap:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(6, 12, 24, 0.7);
+}
+
+#photography-wrapper .item-wrap:hover .overlay {
+  opacity: 1;
+}
+
+#photography-wrapper .item-wrap:hover .link-icon {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #photography .row {
@@ -993,6 +1065,57 @@ footer .social-links a:hover {
   margin: 0 auto;
 }
 
+/* Ensure inline popups (only photography modals) are centered and sized sanely */
+.mfp-wrap:has(.popup-modal[id^="photo-modal-"]) .mfp-container {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(8px, 2vw, 20px);
+  overflow: hidden !important; /* prevent internal scrollbars */
+}
+
+.mfp-wrap:has(.popup-modal[id^="photo-modal-"]) .mfp-container::before {
+  display: none !important;
+}
+
+/* Disable background page scroll when a photo modal is open */
+body:has(.mfp-wrap:has(.popup-modal[id^="photo-modal-"])) {
+  overflow: hidden;
+}
+
+.mfp-wrap:has(.popup-modal[id^="photo-modal-"]) .mfp-inline-holder .mfp-content {
+  width: auto !important;
+  max-width: min(1100px, 92vw) !important;
+  margin: 0 auto !important;
+  overflow: visible !important;
+}
+
+.mfp-wrap:has(.popup-modal[id^="photo-modal-"]) .mfp-content .popup-modal {
+  width: auto;
+  max-width: min(1100px, 92vw);
+  /* avoid scrollbar inside modal */
+  max-height: none;
+  overflow: visible;
+  margin: 0 auto;
+}
+
+/* Keep photo modal media contained within viewport */
+.mfp-wrap:has(.popup-modal[id^="photo-modal-"]) .popup-modal img,
+.mfp-wrap:has(.popup-modal[id^="photo-modal-"]) .popup-modal video {
+  max-width: 92vw;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+}
+
+/* Keep the bottom Close button from forcing width/scroll (photos only) */
+.mfp-wrap:has(.popup-modal[id^="photo-modal-"]) .popup-modal .link-box {
+  justify-content: center;
+}
+.mfp-wrap:has(.popup-modal[id^="photo-modal-"]) .popup-modal .link-box a {
+  flex: 0 0 auto;
+}
+
 .popup-modal {
   background: rgba(8, 12, 24, 0.95);
   border-radius: var(--radius-lg);
@@ -1002,12 +1125,38 @@ footer .social-links a:hover {
   box-shadow: 0 28px 65px rgba(4, 8, 18, 0.7);
 }
 
-.popup-modal img,
-.popup-modal video {
+.mfp-wrap:has(.popup-modal[id^="photo-modal-"]) .popup-modal img,
+.mfp-wrap:has(.popup-modal[id^="photo-modal-"]) .popup-modal video {
   border-radius: var(--radius-md);
   margin-bottom: 1.6rem;
-  max-width: 100%;
+  max-width: min(1100px, 92vw) !important;
+  max-height: 86vh !important;
+  width: auto;
   height: auto;
+}
+
+/* ------------------------------------------------------------------ */
+/* Portfolio modal adjustments
+/* ------------------------------------------------------------------ */
+
+/* Limit images in portfolio popups (modal-*) to a fixed max height */
+.mfp-wrap:has(.popup-modal[id^="modal-"]) .popup-modal > img {
+  display: block;
+  margin: 0 auto 15px; /* center + small whitespace below */
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* If Magnific uses figure wrapper for images, enforce same cap */
+.mfp-wrap:has(.popup-modal[id^="modal-"]) .mfp-figure img {
+  display: block;
+  margin: 0 auto 15px !important;
+  max-height: 500px !important;
+  width: auto !important;
+  height: auto !important;
 }
 
 .popup-modal .description-box {
