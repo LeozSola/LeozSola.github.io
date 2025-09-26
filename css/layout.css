@@ -1144,7 +1144,7 @@ body:has(.mfp-wrap:has(.popup-modal[id^="photo-modal-"])) {
   display: block;
   margin: 0 auto 15px; /* center + small whitespace below */
   max-height: 500px;
-  width: auto;
+  width: 100%;
   height: auto;
   max-width: 100%;
   object-fit: contain;
@@ -1161,7 +1161,7 @@ body:has(.mfp-wrap:has(.popup-modal[id^="photo-modal-"])) {
   display: block;
   margin: 0 auto 15px !important;
   max-height: 500px !important;
-  width: auto !important;
+  width: 100% !important;
   height: auto !important;
 }
 
@@ -1194,7 +1194,34 @@ body:has(.mfp-wrap:has(.popup-modal[id^="photo-modal-"])) {
 
 .popup-modal .link-box a {
   flex: 1 1 auto;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.75rem;
+  color: #031312;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  box-shadow: 0 14px 35px rgba(61, 227, 195, 0.32);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Portfolio: when there are 2+ buttons, keep each to <= 1/2 width */
+.popup-modal[id^="modal-"] .link-box:has(> a + a) a {
+  flex: 1 1 calc(50% - 0.4rem);
+  max-width: calc(50% - 0.4rem);
+}
+
+.popup-modal .link-box a:hover,
+.popup-modal .link-box a:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(61, 227, 195, 0.45);
+  filter: brightness(1.05);
 }
 
 .popup-modal .link-box a.popup-modal-dismiss {
@@ -1204,9 +1231,12 @@ body:has(.mfp-wrap:has(.popup-modal[id^="photo-modal-"])) {
   box-shadow: none;
 }
 
-.popup-modal .link-box a.popup-modal-dismiss:hover {
+.popup-modal .link-box a.popup-modal-dismiss:hover,
+.popup-modal .link-box a.popup-modal-dismiss:focus {
   color: var(--text-primary);
   border-color: rgba(97, 244, 211, 0.3);
+  background: rgba(97, 244, 211, 0.1);
+  transform: translateY(-2px);
 }
 
 /* Photography modal adjustments */
