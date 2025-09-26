@@ -32,13 +32,14 @@
     grid-column: span 12;
   }
 
-  #about .main-col .row .columns {
-    flex: 1 1 100%;
+  #about .main-col .row {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  #about .columns.download {
-    justify-content: center;
-    margin-top: 0.5rem;
+  #about .resume-button {
+    width: 100%;
+    text-align: center;
   }
 
   #resume .header-col {
