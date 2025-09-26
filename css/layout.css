@@ -480,6 +480,21 @@ header#home .scrolldown a:hover::after {
   overflow: hidden;
 }
 
+/* Ensure all text can wrap within timeline cards */
+#resume .main-col,
+#resume .main-col * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+#resume .main-col p,
+#resume .main-col h3,
+#resume .main-col .info {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+}
+
 #resume .main-col::before {
   content: "";
   position: absolute;
@@ -583,13 +598,13 @@ header#home .scrolldown a:hover::after {
 }
 
 #resume .row.education,
-#resume .row.skill,
+#resume .row.work,
 #resume .row.Extracurricular {
   margin-bottom: clamp(3rem, 6vw, 4rem);
 }
 
 #resume .row.education:last-of-type,
-#resume .row.skill:last-of-type,
+#resume .row.work:last-of-type,
 #resume .row.Extracurricular:last-of-type {
   margin-bottom: 0;
 }
