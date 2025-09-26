@@ -64,18 +64,45 @@ jQuery(document).ready(function ($) {
   /*----------------------------------------------------*/
   /* Modal Popup
   ------------------------------------------------------*/
-  $('.item-wrap a').magnificPopup({
-    type: 'inline',
-    fixedContentPos: false,
-    removalDelay: 200,
-    showCloseBtn: false,
-    mainClass: 'mfp-fade'
-  });
+  const initModalLinks = (context) => {
+    const $context = $(context);
+    $context.find('.item-wrap a').magnificPopup({
+      type: 'inline',
+      fixedContentPos: false,
+      removalDelay: 200,
+      showCloseBtn: false,
+      mainClass: 'mfp-fade'
+    });
+  };
+
+  initModalLinks(document);
 
   $document.on('click', '.popup-modal-dismiss', function (event) {
     event.preventDefault();
     $.magnificPopup.close();
   });
+
+  /*----------------------------------------------------*/
+  /* Photography Gallery Loader
+  ------------------------------------------------------*/
+  const photographyTemplate = document.getElementById('photography-template');
+  const loadPhotographyButton = $('#load-photography');
+
+  if (photographyTemplate && loadPhotographyButton.length) {
+    loadPhotographyButton.on('click', function () {
+      const placeholder = document.getElementById('photography-placeholder');
+
+      if (!placeholder) {
+        return;
+      }
+
+      const fragment = photographyTemplate.content.cloneNode(true);
+      placeholder.replaceWith(fragment);
+      initModalLinks($('#photography'));
+
+      $(this).attr('aria-expanded', 'true').remove();
+    });
+  }
 
   /*----------------------------------------------------*/
   /* Flexslider
