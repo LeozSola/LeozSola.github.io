@@ -668,6 +668,11 @@ header#home .scrolldown a:hover::after {
   margin: 0 auto;
 }
 
+#portfolio-wrapper > .columns {
+  /* Override global column spanning so grid can place items two-up */
+  grid-column: auto;
+}
+
 #portfolio-wrapper .portfolio-item {
   position: relative;
 }
