@@ -373,7 +373,7 @@ header#home .scrolldown a:hover::after {
 
 #about .profile-pic {
   width: 100%;
-  max-width: 320px;
+  max-width: 280px;
   border-radius: 28px;
   border: 2px solid rgba(97, 244, 211, 0.25);
   box-shadow: 0 28px 55px rgba(4, 8, 18, 0.55);
@@ -1257,7 +1257,7 @@ body:has(.mfp-wrap:has(.popup-modal[id^="photo-modal-"])) {
 
 .mfp-wrap .popup-modal[id^="photo-modal-"] img {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   max-width: 90vw;
   max-height: 90vh;
   width: auto;
@@ -1268,6 +1268,17 @@ body:has(.mfp-wrap:has(.popup-modal[id^="photo-modal-"])) {
 /* ------------------------------------------------------------------ */
 /* Utility
 /* ------------------------------------------------------------------ */
+
+.scale-with-grid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.popup-modal .scale-with-grid {
+  margin: 0 auto 15px;
+}
 
 .portfolio-site .highlight {
   color: var(--accent);
