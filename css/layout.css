@@ -1150,6 +1150,12 @@ body:has(.mfp-wrap:has(.popup-modal[id^="photo-modal-"])) {
   object-fit: contain;
 }
 
+/* Center videos in portfolio popups without altering size */
+.mfp-wrap:has(.popup-modal[id^="modal-"]) .popup-modal > video {
+  display: block;
+  margin: 0 auto 15px;
+}
+
 /* If Magnific uses figure wrapper for images, enforce same cap */
 .mfp-wrap:has(.popup-modal[id^="modal-"]) .mfp-figure img {
   display: block;
