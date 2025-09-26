@@ -70,6 +70,53 @@ body.portfolio-site .orb-soft {
   margin: 0;
 }
 
+.section-title {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-align: center;
+  padding-bottom: 1rem;
+  width: fit-content;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 82%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  transform: translateX(-50%);
+  border-radius: 999px;
+}
+
+.section-title--stacked {
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.section-title--stacked .title-primary {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  letter-spacing: 0.24em;
+}
+
+.section-title--stacked .title-secondary {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  letter-spacing: 0.32em;
+  color: var(--text-secondary);
+}
+
+.section-title--stacked::after {
+  width: 100%;
+}
+
 /* ------------------------------------------------------------------ */
 /* Navigation
 /* ------------------------------------------------------------------ */
@@ -79,11 +126,12 @@ body.portfolio-site .orb-soft {
 }
 
 #nav-wrap {
-  position: sticky;
-  top: 1.2rem;
+  position: fixed;
+  top: clamp(1rem, 3vw, 1.8rem);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
   width: min(var(--content-width), 92vw);
-  margin: 0 auto clamp(2rem, 4vw, 3rem);
   padding: 0.45rem clamp(1.1rem, 2vw, 1.8rem);
   display: flex;
   justify-content: center;
@@ -161,7 +209,7 @@ header#home {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(3rem, 6vw, 4.5rem) 0 clamp(5rem, 7vw, 6rem);
+  padding: clamp(6rem, 9vw, 7rem) 0 clamp(5rem, 7vw, 6rem);
   background: linear-gradient(135deg, rgba(6, 8, 22, 0.92) 0%, rgba(6, 12, 24, 0.55) 45%, rgba(6, 12, 27, 0.72) 100%),
     url('../images/BackgroundImgs/Esplanade_Skyline_Reflection_Edit.png') center top / cover no-repeat;
   overflow: hidden;
@@ -279,6 +327,7 @@ header#home .scrolldown a {
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  position: relative;
   background: rgba(8, 12, 24, 0.76);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--accent);
@@ -288,8 +337,26 @@ header#home .scrolldown a {
 }
 
 header#home .scrolldown a:hover {
-  transform: translate(-50%, 4px);
+  transform: translateY(4px);
   background: rgba(97, 244, 211, 0.18);
+}
+
+header#home .scrolldown a i {
+  display: none;
+}
+
+header#home .scrolldown a::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(45deg);
+  transition: var(--transition);
+}
+
+header#home .scrolldown a:hover::after {
+  transform: translateY(3px) rotate(45deg);
 }
 
 /* ------------------------------------------------------------------ */
@@ -332,15 +399,22 @@ header#home .scrolldown a:hover {
   color: var(--text-secondary);
 }
 
-#about .contact-details,
-#about .download {
+#about .main-col .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.2rem, 2.5vw, 2.2rem);
   margin-top: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+#about .main-col .row .columns {
+  flex: 1 1 260px;
 }
 
 #about .contact-details {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+  min-width: 240px;
 }
 
 #about .contact-details h2 {
@@ -356,13 +430,18 @@ header#home .scrolldown a:hover {
 }
 
 #about .columns.download {
+  flex: 0 1 220px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  align-self: flex-end;
 }
 
 #about .columns.download .button {
+  width: 100%;
+  max-width: 240px;
   padding-inline: 2.1rem;
+  justify-content: center;
 }
 
 /* ------------------------------------------------------------------ */
@@ -402,6 +481,10 @@ header#home .scrolldown a:hover {
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: clamp(2.2rem, 3vw, 3rem);
   box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.8rem, 3vw, 2.6rem);
+  overflow: hidden;
 }
 
 #resume .main-col::before {
@@ -418,6 +501,7 @@ header#home .scrolldown a:hover {
 #resume .row.item {
   position: relative;
   padding-left: clamp(2.6rem, 4vw, 3.2rem);
+  padding-right: clamp(1.5rem, 3vw, 2.2rem);
   margin-bottom: clamp(1.8rem, 3vw, 2.6rem);
 }
 
@@ -442,6 +526,11 @@ header#home .scrolldown a:hover {
   margin-bottom: 0.5rem;
 }
 
+#resume .main-col p {
+  overflow-wrap: anywhere;
+}
+
+
 #resume .info {
   font-size: 0.95rem;
   letter-spacing: 0.04em;
@@ -461,6 +550,7 @@ header#home .scrolldown a:hover {
 
 #resume .row.skill .main-col {
   padding-left: clamp(2.6rem, 4vw, 3rem);
+  padding-right: clamp(1.5rem, 3vw, 2.2rem);
   display: grid;
   gap: 1.6rem;
 }
@@ -522,24 +612,29 @@ header#home .scrolldown a:hover {
 #portfolio .twelve.columns.collapsed {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: clamp(2.4rem, 4vw, 3.4rem);
+  width: min(100%, 1080px);
+  margin: 0 auto;
 }
 
-#portfolio h1 {
-  background: none !important;
-  color: var(--text-primary) !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  text-align: left !important;
-  font-size: clamp(2.3rem, 5vw, 3.2rem) !important;
-  letter-spacing: -0.01em !important;
+#portfolio .section-title {
+  margin: 0 auto !important;
+  font-size: clamp(2.4rem, 5vw, 3.3rem);
+  letter-spacing: -0.015em;
+}
+
+#portfolio .section-title::after {
+  width: 120%;
 }
 
 #portfolio-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(1.6rem, 3vw, 2.4rem);
   width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 #portfolio-wrapper .portfolio-item {
@@ -637,6 +732,8 @@ header#home .scrolldown a:hover {
 #photography-wrapper {
   column-count: 3;
   column-gap: clamp(1rem, 2vw, 1.5rem);
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 #photography-wrapper .portfolio-item {
@@ -664,6 +761,37 @@ header#home .scrolldown a:hover {
   transform: scale(1.04);
   filter: saturate(1.1);
 }
+
+#photography .row {
+  justify-content: center;
+}
+
+#photography .header-col {
+  grid-column: span 12;
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(2.2rem, 4vw, 3rem);
+}
+
+#photography .header-col .section-title {
+  text-transform: uppercase;
+}
+
+#photography .title-primary {
+  letter-spacing: 0.32em;
+}
+
+#photography .title-secondary {
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  letter-spacing: 0.26em;
+}
+
+#photography .twelve.columns {
+  grid-column: span 12;
+  width: min(100%, 1080px);
+  margin: 0 auto;
+}
+
 
 /* ------------------------------------------------------------------ */
 /* Contact

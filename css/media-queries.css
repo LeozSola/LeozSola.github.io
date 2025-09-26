@@ -32,8 +32,13 @@
     grid-column: span 12;
   }
 
+  #about .main-col .row .columns {
+    flex: 1 1 100%;
+  }
+
   #about .columns.download {
-    justify-content: flex-start;
+    justify-content: center;
+    margin-top: 0.5rem;
   }
 
   #resume .header-col {
@@ -93,7 +98,8 @@
   }
 
   #portfolio-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 640px;
   }
 
   #photography-wrapper {
