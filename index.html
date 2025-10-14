@@ -1044,27 +1044,27 @@
             <div class="eight columns">
 
                <!-- form -->
-               <form action="" method="post" id="contactForm" name="contactForm">
+               <form action="https://formspree.io/f/mnngolqg" method="post" id="contactForm" name="contactForm">
 					<fieldset>
 
                   <div>
 						   <label for="contactName">Name <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactName" name="contactName" autocomplete="name" required>
+						   <input type="text" value="" size="35" id="contactName" name="name" autocomplete="name" required>
                   </div>
 
                   <div>
 						   <label for="contactEmail">Email <span class="required">*</span></label>
-						   <input type="email" value="" size="35" id="contactEmail" name="contactEmail" autocomplete="email" required>
+						   <input type="email" value="" size="35" id="contactEmail" name="email" autocomplete="email" required>
                   </div>
 
                   <div>
 						   <label for="contactSubject">Subject</label>
-						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject" autocomplete="subject">
+						   <input type="text" value="" size="35" id="contactSubject" name="subject" autocomplete="subject">
                   </div>
 
                   <div>
                      <label for="contactMessage">Message <span class="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage" required></textarea>
+                     <textarea cols="50" rows="15" id="contactMessage" name="message" required></textarea>
                   </div>
 
                   <div>
@@ -1077,8 +1077,10 @@
 					</fieldset>
 				   </form> <!-- Form End -->
 
+               <div id="message-warning" role="alert" aria-live="polite"></div>
+
                <!-- contact-success -->
-				   <div id="message-success">
+				   <div id="message-success" role="status" aria-live="polite">
                   <i class="fa fa-check"></i>Your message was sent, thank you!<br>
 				   </div>
 
