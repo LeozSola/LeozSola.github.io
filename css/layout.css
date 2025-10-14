@@ -621,6 +621,26 @@ header#home .scrolldown a:hover::after {
   margin-bottom: 0;
 }
 
+#resume .row.resumepdf {
+  margin-bottom: clamp(3rem, 6vw, 4rem);
+}
+
+#resume .resumepdf .main-col {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#resume .resumepdf-viewer {
+  display: block;
+  width: clamp(320px, 72vw, 860px);
+  aspect-ratio: 8.5 / 11;
+  height: auto;
+  border: 0;
+  background-color: transparent;
+  margin-left: 25px;
+}
+
 #resume .row.education,
 #resume .row.work,
 #resume .row.Extracurricular {
