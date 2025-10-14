@@ -125,27 +125,51 @@ jQuery(document).ready(function ($) {
   $contactForm.on('submit', function (event) {
     event.preventDefault();
 
+    if (!$contactForm.length) {
+      return;
+    }
+
+    const formElement = $contactForm.get(0);
+    const endpoint = formElement.getAttribute('action') || '';
+
+    $messageWarning.hide().empty();
     $imageLoader.fadeIn();
 
-    $.ajax({
-      type: 'POST',
-      url: 'inc/sendEmail.php',
-      data: $contactForm.serialize(),
-      success: function (msg) {
+    if (!endpoint || endpoint === 'PASTE ENDPOINT') {
+      $imageLoader.fadeOut();
+      $messageWarning
+        .html('The contact form is not configured yet. Please update the Formspree endpoint.')
+        .fadeIn();
+      return;
+    }
+
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(formElement)
+    })
+      .then(async (response) => {
         $imageLoader.fadeOut();
 
-        if (msg === 'OK') {
-          $messageWarning.hide();
+        if (response.ok) {
+          $contactForm.get(0).reset();
           $contactForm.fadeOut();
           $messageSuccess.fadeIn();
-        } else {
-          $messageWarning.html(msg).fadeIn();
+          return;
         }
-      },
-      error: function () {
+
+        const data = await response.json().catch(() => ({}));
+        let errorMessage = 'Something went wrong. Please try again later.';
+
+        if (data && data.errors && data.errors.length) {
+          errorMessage = data.errors.map((error) => error.message).join('<br>');
+        }
+
+        $messageWarning.html(errorMessage).fadeIn();
+      })
+      .catch(() => {
         $imageLoader.fadeOut();
         $messageWarning.html('Something went wrong. Please try again later.').fadeIn();
-      }
-    });
+      });
   });
 });
