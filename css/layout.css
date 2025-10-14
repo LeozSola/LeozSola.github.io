@@ -497,6 +497,7 @@ header#home .scrolldown a:hover::after {
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: clamp(2.2rem, 3vw, 3rem);
+  --timeline-offset: clamp(1.9rem, 3vw, 2.4rem);
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
@@ -524,7 +525,7 @@ header#home .scrolldown a:hover::after {
   position: absolute;
   top: clamp(1.2rem, 3vw, 1.8rem);
   bottom: clamp(1.2rem, 3vw, 1.8rem);
-  left: clamp(1.9rem, 3vw, 2.4rem);
+  left: var(--timeline-offset);
   width: 2px;
   background: linear-gradient(180deg, rgba(97, 244, 211, 0.45) 0%, rgba(97, 244, 211, 0) 70%);
   border-radius: 999px;
@@ -544,7 +545,7 @@ header#home .scrolldown a:hover::after {
 #resume .row.item::before {
   content: "";
   position: absolute;
-  left: calc(clamp(1.9rem, 3vw, 2.4rem) - 6px);
+  left: calc(var(--timeline-offset) - 6px);
   top: 1.1rem;
   width: 12px;
   height: 12px;

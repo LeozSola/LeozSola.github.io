@@ -50,10 +50,7 @@
   #resume .main-col {
     grid-column: span 12;
     padding: clamp(2rem, 4vw, 2.6rem);
-  }
-
-  #resume .main-col::before {
-    left: clamp(0.9rem, 2vw, 1.2rem);
+    --timeline-offset: clamp(0.9rem, 2vw, 1.2rem);
   }
 
   #resume .row.item,
@@ -61,7 +58,10 @@
     padding-left: clamp(2.1rem, 4vw, 2.6rem);
   }
 
-  #resume .row.item::before,
+  #resume .row.item::before {
+    left: calc(var(--timeline-offset) - 6px);
+  }
+
   #resume .row.skill .main-col h3::before {
     left: calc(clamp(0.7rem, 2vw, 1rem));
   }
@@ -163,13 +163,29 @@
     justify-content: center;
   }
 
+  #resume .main-col {
+    padding: clamp(1.8rem, 5vw, 2.2rem);
+  }
+
+  #resume .main-col::before {
+    content: none;
+  }
+
   #resume .row.item,
   #resume .row.skill .main-col {
-    padding-left: 2rem;
+    padding-left: clamp(1.4rem, 5vw, 1.8rem);
   }
 
   #resume .row.item::before {
-    left: 0.75rem;
+    left: 0;
+    top: 0.55rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    box-shadow: none;
+  }
+
+  #resume .row.skill .main-col h3::before {
+    display: none;
   }
 
   #contact aside.footer-widgets {
