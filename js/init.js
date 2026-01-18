@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
   const $document = $(document);
   const $header = $('header');
   const $navWrap = $('#nav-wrap');
-  const $sections = $('section');
+  const $sections = $('section[id], header#home');
   const $navigationLinks = $('#nav-wrap a');
   const $contactForm = $('#contactForm');
   const $imageLoader = $('#image-loader');
@@ -26,26 +26,34 @@ jQuery(document).ready(function ($) {
   /*----------------------------------------------------*/
   /* Highlight the current section in the navigation bar
   ------------------------------------------------------*/
-  $sections.waypoint({
-    handler: function (event, direction) {
-      let $activeSection = $(this);
+  const updateActiveNav = () => {
+    const navHeight = $navWrap.outerHeight() || 0;
+    const scrollPosition = $window.scrollTop() + navHeight + 16;
+    let activeId = '';
 
-      if (direction === 'up') {
-        $activeSection = $activeSection.prev();
+    $sections.each(function () {
+      const $section = $(this);
+      const sectionTop = $section.offset().top;
+
+      if (scrollPosition >= sectionTop) {
+        activeId = $section.attr('id') || activeId;
       }
+    });
 
-      const activeId = $activeSection.attr('id');
-      if (!activeId) {
-        return;
-      }
+    if (!activeId) {
+      return;
+    }
 
-      const $activeLink = $navigationLinks.filter(`[href="#${activeId}"]`);
+    const $activeLink = $navigationLinks.filter(`[href="#${activeId}"]`);
+    if (!$activeLink.length) {
+      return;
+    }
 
-      $navigationLinks.parent().removeClass('current');
-      $activeLink.parent().addClass('current');
-    },
-    offset: '35%'
-  });
+    $navigationLinks.parent().removeClass('current');
+    $activeLink.parent().addClass('current');
+  };
+
+  updateActiveNav();
 
   /*----------------------------------------------------*/
   /* Fade In/Out Primary Navigation
@@ -59,7 +67,11 @@ jQuery(document).ready(function ($) {
     } else {
       $navWrap.removeClass('opaque');
     }
+
+    updateActiveNav();
   });
+
+  $window.on('resize', updateActiveNav);
 
   /*----------------------------------------------------*/
   /* Modal Popup
@@ -99,6 +111,7 @@ jQuery(document).ready(function ($) {
       const fragment = photographyTemplate.content.cloneNode(true);
       placeholder.replaceWith(fragment);
       initModalLinks($('#photography'));
+      updateActiveNav();
 
       $(this).attr('aria-expanded', 'true').remove();
     });
