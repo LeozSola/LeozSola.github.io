@@ -449,6 +449,7 @@ header#home .scrolldown a:hover::after {
   align-items: center;
   justify-content: center;
   margin: 0;
+  transform: translateY(-12px);
 }
 
 #about .resume-button {
@@ -461,6 +462,7 @@ header#home .scrolldown a:hover::after {
     width: 100%;
     justify-content: center;
     margin-top: 0;
+    transform: none;
   }
   #about .resume-button {
     margin-top: clamp(1rem, 2vw, 1.6rem);
@@ -1339,5 +1341,6 @@ body:has(.mfp-wrap:has(.popup-modal[id^="photo-modal-"])) {
 .portfolio-site .highlight {
   color: var(--accent);
 }
+
 
 
