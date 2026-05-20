@@ -242,10 +242,12 @@ header#home .banner {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
   z-index: 1;
 }
 
 header#home .banner-text {
+  flex: 1 1 0;
   max-width: 720px;
   padding: clamp(2rem, 3vw, 3.2rem);
   border-radius: var(--radius-lg);
@@ -253,6 +255,21 @@ header#home .banner-text {
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(18px);
+}
+
+header#home .banner-photo {
+  flex: 0 1 clamp(220px, 24vw, 320px);
+  display: flex;
+  justify-content: center;
+}
+
+header#home .hero-profile-pic {
+  width: min(100%, 320px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 2px solid rgba(97, 244, 211, 0.25);
+  box-shadow: 0 28px 55px rgba(4, 8, 18, 0.55);
 }
 
 header#home .banner-text h1 {
@@ -369,24 +386,20 @@ header#home .scrolldown a:hover::after {
 
 #about .row {
   align-items: center;
-}
-
-#about .profile-pic {
-  width: 100%;
-  max-width: 280px;
-  border-radius: 28px;
-  border: 2px solid rgba(97, 244, 211, 0.25);
-  box-shadow: 0 28px 55px rgba(4, 8, 18, 0.55);
-  object-fit: cover;
-  margin: 0 auto;
+  justify-content: center;
 }
 
 #about .main-col {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 960px;
+  justify-self: center;
   background: var(--surface-1);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-soft);
   padding: clamp(2.2rem, 3.5vw, 3.2rem);
   box-shadow: var(--shadow-card);
+  text-align: center;
 }
 
 #about h2 {
@@ -397,6 +410,9 @@ header#home .scrolldown a:hover::after {
 #about p {
   font-size: 1.05rem;
   color: var(--text-secondary);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #about .main-col .row {
@@ -407,6 +423,8 @@ header#home .scrolldown a:hover::after {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 #about .main-col .row .columns {
@@ -416,21 +434,21 @@ header#home .scrolldown a:hover::after {
 }
 
 #about .columns.contact-details {
-  flex: 1 1 360px;
+  flex: 1 1 320px;
   min-width: 260px;
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+  align-items: center;
+  text-align: center;
 }
 
 #about .columns.actions {
   flex: 0 0 auto;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  margin-left: auto;
-  margin-top: -30px;
-  margin-right: 60px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 #about .resume-button {
@@ -441,7 +459,7 @@ header#home .scrolldown a:hover::after {
 @media (max-width: 640px) {
   #about .columns.actions {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 0;
   }
   #about .resume-button {
@@ -1321,4 +1339,5 @@ body:has(.mfp-wrap:has(.popup-modal[id^="photo-modal-"])) {
 .portfolio-site .highlight {
   color: var(--accent);
 }
+
 
