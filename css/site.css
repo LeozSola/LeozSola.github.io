@@ -843,7 +843,7 @@ body.dialog-open {
 }
 
 .benchmark-facts strong {
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.3rem;
   color: var(--accent);
   font: 700 1.3rem/1.2 var(--heading);
 }
