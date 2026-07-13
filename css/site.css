@@ -502,6 +502,23 @@ p {
   line-height: 1.5;
 }
 
+.contact-email {
+  width: fit-content;
+  min-height: 44px;
+  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(96, 230, 197, 0.4);
+  text-underline-offset: 0.22em;
+}
+
+.contact-email:hover {
+  text-decoration-color: var(--accent);
+}
+
 .availability span {
   width: 9px;
   height: 9px;
@@ -780,6 +797,68 @@ body.dialog-open {
 
 .project-dialog-content .text-link {
   margin-top: 0.5rem;
+}
+
+.project-case-study {
+  margin: 1.75rem 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project-case-study section {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.project-case-study h3 {
+  margin-bottom: 0.65rem;
+  font-size: 1.15rem;
+}
+
+.project-case-study p,
+.case-study-results {
+  max-width: 72ch;
+  margin-bottom: 0;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+.benchmark-facts {
+  margin: 0.9rem 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.benchmark-facts div {
+  padding: 0.9rem;
+  background: rgba(16, 28, 45, 0.72);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+
+.benchmark-facts strong,
+.benchmark-facts span {
+  display: block;
+}
+
+.benchmark-facts strong {
+  margin-bottom: 0.15rem;
+  color: var(--accent);
+  font: 700 1.3rem/1.2 var(--heading);
+}
+
+.benchmark-facts span {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.case-study-results {
+  padding-left: 1.15rem;
+}
+
+.case-study-results li + li {
+  margin-top: 0.55rem;
 }
 
 @keyframes dialog-enter {
@@ -1519,7 +1598,7 @@ body.dialog-open {
 
   .hero-portrait-wrap {
     width: min(58vw, 290px);
-    justify-self: start;
+    justify-self: center;
     transform: none;
   }
 
@@ -1661,6 +1740,10 @@ body.dialog-open {
 
   .project-dialog-gallery-split img {
     height: auto;
+  }
+
+  .benchmark-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .skills-intro {
