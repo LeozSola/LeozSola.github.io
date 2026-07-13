@@ -115,6 +115,10 @@ h1 {
   display: block;
 }
 
+.hero h1 {
+  font-size: clamp(2.6rem, 5.8vw, 4.8rem);
+}
+
 h2 {
   margin-bottom: 1.1rem;
   font-size: clamp(2.25rem, 5vw, 3.8rem);
@@ -398,7 +402,7 @@ p {
 .hero-credential {
   width: fit-content;
   margin: 0 0 2rem;
-  padding: 0.7rem 0.9rem;
+  padding: 0.85rem 1.1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem 0.65rem;
@@ -406,7 +410,7 @@ p {
   background: rgba(16, 28, 45, 0.72);
   border: 1px solid rgba(96, 230, 197, 0.25);
   border-radius: 12px;
-  font-size: 0.86rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -453,7 +457,7 @@ p {
   justify-self: end;
   width: min(100%, 330px);
   text-align: center;
-  transform: translateY(-1.5rem);
+  transform: translateY(-2rem);
 }
 
 .portrait-frame {
