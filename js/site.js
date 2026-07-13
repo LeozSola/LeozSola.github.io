@@ -80,4 +80,40 @@
 
   const year = document.querySelector('[data-current-year]');
   if (year) year.textContent = new Date().getFullYear();
+
+  const dialogTriggers = [...document.querySelectorAll('[data-dialog]')];
+  let activeDialogTrigger = null;
+
+  const closeDialog = (dialog) => {
+    if (!dialog?.open) return;
+    dialog.close();
+  };
+
+  dialogTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const dialog = document.getElementById(trigger.dataset.dialog);
+      if (!(dialog instanceof HTMLDialogElement)) return;
+      activeDialogTrigger = trigger;
+      dialog.showModal();
+      document.body.classList.add('dialog-open');
+      dialog.querySelector('[data-dialog-close]')?.focus();
+    });
+  });
+
+  document.querySelectorAll('.project-dialog').forEach((dialog) => {
+    dialog.querySelector('[data-dialog-close]')?.addEventListener('click', () => closeDialog(dialog));
+
+    dialog.addEventListener('click', (event) => {
+      const bounds = dialog.getBoundingClientRect();
+      const outside = event.clientX < bounds.left || event.clientX > bounds.right
+        || event.clientY < bounds.top || event.clientY > bounds.bottom;
+      if (outside) closeDialog(dialog);
+    });
+
+    dialog.addEventListener('close', () => {
+      document.body.classList.remove('dialog-open');
+      activeDialogTrigger?.focus();
+      activeDialogTrigger = null;
+    });
+  });
 })();

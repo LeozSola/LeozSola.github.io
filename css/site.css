@@ -288,13 +288,11 @@ p {
 .brand-mark {
   width: 42px;
   height: 42px;
-  display: grid;
-  place-items: center;
-  color: var(--accent-dark);
-  background: var(--accent);
+  display: block;
+  object-fit: cover;
+  background: var(--surface);
+  border: 1px solid rgba(96, 230, 197, 0.45);
   border-radius: 11px;
-  font-size: 0.9rem;
-  letter-spacing: -0.04em;
 }
 
 .brand-name {
@@ -391,10 +389,35 @@ p {
 
 .hero-lede {
   max-width: 710px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #c8d4e3;
   font-size: clamp(1.1rem, 2vw, 1.34rem);
   line-height: 1.65;
+}
+
+.hero-credential {
+  width: fit-content;
+  margin: 0 0 2rem;
+  padding: 0.7rem 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.65rem;
+  color: var(--text);
+  background: rgba(16, 28, 45, 0.72);
+  border: 1px solid rgba(96, 230, 197, 0.25);
+  border-radius: 12px;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.hero-credential span + span {
+  color: var(--text-muted);
+}
+
+.hero-credential span + span::before {
+  margin-right: 0.65rem;
+  color: var(--accent);
+  content: "·";
 }
 
 .hero-actions,
@@ -430,6 +453,7 @@ p {
   justify-self: end;
   width: min(100%, 330px);
   text-align: center;
+  transform: translateY(-1.5rem);
 }
 
 .portrait-frame {
@@ -598,6 +622,150 @@ img.selected-project-media-contain {
 
 .selected-project-content .tag-list {
   margin: 0.75rem 0 1rem;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+}
+
+button.text-link {
+  padding: 0;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 700;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+button.text-link:focus-visible,
+.dialog-close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+body.dialog-open {
+  overflow: hidden;
+}
+
+.project-dialog {
+  width: min(920px, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  color: var(--text);
+  background: #0b1625;
+  border: 1px solid rgba(96, 230, 197, 0.3);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.62);
+  overflow: auto;
+}
+
+.project-dialog::backdrop {
+  background: rgba(2, 7, 14, 0.82);
+  backdrop-filter: blur(7px);
+}
+
+.project-dialog[open] {
+  animation: dialog-enter 180ms ease-out;
+}
+
+.project-dialog-shell {
+  position: relative;
+}
+
+.dialog-close {
+  position: sticky;
+  z-index: 2;
+  top: 0.85rem;
+  float: right;
+  width: 44px;
+  height: 44px;
+  margin: 0.85rem 0.85rem -3.6rem 0;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  font: 400 1.8rem/1 var(--body);
+  background: rgba(7, 14, 25, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dialog-close:hover {
+  color: var(--accent);
+  border-color: rgba(96, 230, 197, 0.5);
+}
+
+.project-dialog-gallery {
+  clear: both;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  display: grid;
+  background: #07101d;
+}
+
+.project-dialog-gallery-split {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.project-dialog-gallery img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.project-dialog-gallery-split img {
+  height: 100%;
+  max-height: 440px;
+}
+
+.project-dialog-gallery-contain img {
+  max-height: 440px;
+  object-fit: contain;
+  background: #e8ebed;
+}
+
+.project-dialog-gallery-padded {
+  padding: clamp(2rem, 6vw, 4rem);
+  background: #e8ebed;
+}
+
+.project-dialog-gallery-padded img {
+  max-height: 560px;
+  border: 0;
+}
+
+.project-dialog-content {
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.project-dialog-content-wide {
+  padding-top: clamp(3.5rem, 7vw, 5rem);
+}
+
+.project-dialog-content h2 {
+  max-width: 22ch;
+  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.project-dialog-content > p:not(.project-kicker) {
+  max-width: 72ch;
+  line-height: 1.7;
+}
+
+.project-dialog-content .text-link {
+  margin-top: 0.5rem;
+}
+
+@keyframes dialog-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .selected-project .architecture-card {
@@ -1333,6 +1501,7 @@ img.selected-project-media-contain {
   .hero-portrait-wrap {
     width: min(58vw, 290px);
     justify-self: start;
+    transform: none;
   }
 
   .focus-strip {
@@ -1460,6 +1629,14 @@ img.selected-project-media-contain {
   .compact-project {
     grid-template-columns: 1fr;
     gap: 0.8rem;
+  }
+
+  .project-dialog-gallery-split {
+    grid-template-columns: 1fr;
+  }
+
+  .project-dialog-gallery-split img {
+    height: auto;
   }
 
   .skills-intro {
