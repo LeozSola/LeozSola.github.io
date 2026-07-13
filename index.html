@@ -122,6 +122,27 @@
         </div>
 
         <div class="selected-projects">
+          <article class="selected-project" aria-labelledby="tumor-title">
+            <img class="selected-project-media" src="images/optimized/tumor-720.webp" srcset="images/optimized/tumor-720.webp 720w, images/optimized/tumor-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), 42vw" alt="Three-dimensional tumor models and source MRI scans" width="933" height="1034" loading="lazy" decoding="async">
+            <div class="selected-project-content">
+              <p class="project-kicker">Computational fabrication · Medical imaging</p>
+              <h3 id="tumor-title">MRI-Based 3D Printed Tumor Models</h3>
+              <p>Our team built a pipeline that takes pre-segmented MRI slices, aligns and interpolates them, and generates a Marching Cubes mesh for fabrication. The goal was to give doctors a physical way to inspect a tumor before operating.</p>
+              <ul class="tag-list"><li>Python</li><li>Marching Cubes</li><li>3D fabrication</li></ul>
+              <a class="text-link" href="https://gitlab.com/cs581/mri-tumor-data" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="selected-project" aria-labelledby="rocket-title">
+            <img class="selected-project-media selected-project-media-contain" src="images/optimized/irec-720.webp" srcset="images/optimized/irec-720.webp 720w, images/optimized/irec-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), 42vw" alt="BURPG rocket avionics control panel" width="1396" height="1612" loading="lazy" decoding="async">
+            <div class="selected-project-content">
+              <p class="project-kicker">Embedded systems · Aerospace</p>
+              <h3 id="rocket-title">BURPG IREC Rocket</h3>
+              <p>I helped design and produce flight-computer software for Boston University’s IREC team. The Teensy 4.1-based system handled telemetry, ejection charges, data recording, and parachute deployment; I contributed testing and debugging to improve reliability.</p>
+              <ul class="tag-list"><li>Teensy 4.1</li><li>Telemetry</li><li>Hardware testing</li></ul>
+            </div>
+          </article>
+
           <article class="selected-project" aria-labelledby="holostream-title">
             <figure class="architecture-card selected-project-media" aria-labelledby="architecture-caption">
               <figcaption id="architecture-caption">Three vector-state architectures evaluated</figcaption>
@@ -166,27 +187,6 @@
             </div>
           </article>
 
-          <article class="selected-project" aria-labelledby="rocket-title">
-            <img class="selected-project-media selected-project-media-contain" src="images/optimized/irec-720.webp" srcset="images/optimized/irec-720.webp 720w, images/optimized/irec-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), 42vw" alt="BURPG rocket avionics control panel" width="1396" height="1612" loading="lazy" decoding="async">
-            <div class="selected-project-content">
-              <p class="project-kicker">Embedded systems · Aerospace</p>
-              <h3 id="rocket-title">BURPG IREC Rocket</h3>
-              <p>I helped design and produce flight-computer software for Boston University’s IREC team. The Teensy 4.1-based system handled telemetry, ejection charges, data recording, and parachute deployment; I contributed testing and debugging to improve reliability.</p>
-              <ul class="tag-list"><li>Teensy 4.1</li><li>Telemetry</li><li>Hardware testing</li></ul>
-            </div>
-          </article>
-
-          <article class="selected-project" aria-labelledby="tumor-title">
-            <img class="selected-project-media" src="images/optimized/tumor-720.webp" srcset="images/optimized/tumor-720.webp 720w, images/optimized/tumor-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), 42vw" alt="Three-dimensional tumor models and source MRI scans" width="933" height="1034" loading="lazy" decoding="async">
-            <div class="selected-project-content">
-              <p class="project-kicker">Computational fabrication · Medical imaging</p>
-              <h3 id="tumor-title">MRI-Based 3D Printed Tumor Models</h3>
-              <p>Our team built a pipeline that takes pre-segmented MRI slices, aligns and interpolates them, and generates a Marching Cubes mesh for fabrication. The goal was to give doctors a physical way to inspect a tumor before operating.</p>
-              <ul class="tag-list"><li>Python</li><li>Marching Cubes</li><li>3D fabrication</li></ul>
-              <a class="text-link" href="https://gitlab.com/cs581/mri-tumor-data" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-
           <article class="selected-project" aria-labelledby="easynote-title">
             <img class="selected-project-media selected-project-media-contain" src="images/optimized/easynote-720.webp" srcset="images/optimized/easynote-720.webp 720w, images/optimized/easynote-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), 42vw" alt="EasyNote note-taking project logo" width="1396" height="1612" loading="lazy" decoding="async">
             <div class="selected-project-content">
@@ -203,19 +203,23 @@
           <div class="additional-work-heading"><h3>Additional work</h3></div>
           <div class="compact-projects">
             <article class="compact-project">
-              <div>
+              <div class="compact-project-title">
                 <p class="project-kicker">Datathon project</p>
                 <h4>Predictive Model</h4>
               </div>
-              <p>Worked with a team to clean, visualize, and model a real-world dataset with pandas and scikit-learn, then evaluate the model’s performance.</p>
-              <a class="text-link" href="https://github.com/amv1225/MiniHacks2022" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>
+              <div class="compact-project-summary">
+                <p>Worked with a team to clean, visualize, and model a real-world dataset with pandas and scikit-learn, then evaluate the model’s performance.</p>
+                <a class="text-link" href="https://github.com/amv1225/MiniHacks2022" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>
+              </div>
             </article>
             <article class="compact-project">
-              <div>
+              <div class="compact-project-title">
                 <p class="project-kicker">AI web application</p>
                 <h4>ChatGPTInsta</h4>
               </div>
-              <p>Built a React interface connected to a Python backend that generates social-media captions, hashtags, and post descriptions from user prompts.</p>
+              <div class="compact-project-summary">
+                <p>Built a React interface connected to a Python backend that generates social-media captions, hashtags, and post descriptions from user prompts.</p>
+              </div>
             </article>
           </div>
         </div>
