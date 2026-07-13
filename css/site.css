@@ -429,6 +429,7 @@ p {
 .hero-portrait-wrap {
   justify-self: end;
   width: min(100%, 330px);
+  text-align: center;
 }
 
 .portrait-frame {
@@ -451,6 +452,7 @@ p {
   margin: 1rem 0 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   color: var(--text-soft);
   font-size: 0.84rem;
@@ -1033,25 +1035,44 @@ img.selected-project-media-contain {
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);
-  align-items: start;
+  grid-template-columns: minmax(220px, 0.45fr) minmax(0, 1fr);
+  align-items: center;
   gap: clamp(2.5rem, 8vw, 7rem);
 }
 
-.about-grid h2 {
-  max-width: none;
-  margin-bottom: 0;
-  font-size: clamp(2.25rem, 4vw, 3.25rem);
+.about-photo {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(96, 230, 197, 0.28);
+  border-radius: var(--radius-md);
+  background: rgba(16, 28, 45, 0.48);
+  box-shadow: var(--shadow);
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
 }
 
 .about-copy {
   max-width: 760px;
-  padding-top: 0.4rem;
+}
+
+.about-copy h2 {
+  max-width: none;
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
 }
 
 .about-copy p {
   color: #c8d4e3;
   font-size: 1.05rem;
+}
+
+.about-resume-button {
+  margin-top: 0.35rem;
 }
 
 /* Photography */
@@ -1334,6 +1355,10 @@ img.selected-project-media-contain {
   .about-copy {
     max-width: 700px;
     padding-top: 0;
+  }
+
+  .about-photo {
+    width: min(100%, 360px);
   }
 
   .contact-actions {
