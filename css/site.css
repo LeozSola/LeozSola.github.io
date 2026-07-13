@@ -331,6 +331,21 @@ p {
   color: var(--accent);
 }
 
+.nav-links .nav-resume {
+  margin-left: 0.5rem;
+  padding-inline: 1rem;
+  color: var(--accent);
+  background: rgba(96, 230, 197, 0.04);
+  border: 1px solid rgba(96, 230, 197, 0.48);
+  border-radius: 10px;
+}
+
+.nav-links .nav-resume:hover {
+  color: var(--page-deep);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
 .nav-toggle {
   width: 46px;
   height: 46px;
@@ -1587,6 +1602,11 @@ body.dialog-open {
 
   .nav-links a {
     padding-inline: 1rem;
+  }
+
+  .nav-links .nav-resume {
+    margin: 0.35rem 0 0;
+    justify-content: center;
   }
 
   .selected-project {
