@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Leonardo Sola — Software Engineer | Distributed Systems &amp; Robotics</title>
-  <meta name="description" content="Portfolio of Leonardo Sola, a Boston University computer science graduate focused on distributed systems, robotics, and engineering software.">
+  <title>Leonardo Sola — Software Engineer | Distributed Systems &amp; Cloud Infrastructure</title>
+  <meta name="description" content="Portfolio of Leonardo Sola, an incoming AWS software development engineer focused on distributed systems, cloud infrastructure, and reliable software at scale.">
   <meta name="author" content="Leonardo Sola">
   <meta name="theme-color" content="#07101d">
   <link rel="canonical" href="https://leonardosola.com/">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Leonardo Sola — Software Engineer">
-  <meta property="og:description" content="Distributed systems, robotics, and engineering software projects by Leonardo Sola.">
+  <meta property="og:title" content="Leonardo Sola — Software Engineer | Distributed Systems &amp; Cloud Infrastructure">
+  <meta property="og:description" content="Distributed systems, cloud infrastructure, and engineering software projects by Leonardo Sola, incoming SDE at AWS.">
   <meta property="og:url" content="https://leonardosola.com/">
   <meta property="og:image" content="https://leonardosola.com/images/optimized/og-preview.jpg">
   <meta property="og:image:alt" content="Boston skyline reflected across the Charles River at night">
@@ -42,9 +42,10 @@
     ],
     "knowsAbout": [
       "Distributed systems",
-      "Robotics",
-      "Engineering software",
+      "Cloud infrastructure",
       "Vector search",
+      "Stream processing",
+      "Robotics",
       "Computational fabrication"
     ]
   }
@@ -83,9 +84,13 @@
       <div class="hero-backdrop" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Software engineer · Distributed systems · Robotics</p>
+          <p class="eyebrow">Software engineer · Distributed systems · Cloud infrastructure</p>
           <h1 id="hero-title">Hi, I’m <span>Leonardo Sola!</span></h1>
           <p class="hero-lede">I build reliable software for data-intensive and physical systems—from streaming vector search to rocket avionics and computational fabrication.</p>
+          <div class="hero-next" aria-label="Upcoming position">
+            <span class="hero-next-label">Incoming Software Development Engineer @ AWS</span>
+            <span class="hero-next-team">Joining the Amazon FSx team</span>
+          </div>
           <p class="hero-credential"><span>M.S. in Computer Science</span><span>Boston University</span></p>
 
           <div class="hero-actions">
@@ -109,7 +114,6 @@
           <div class="portrait-frame">
             <img class="hero-portrait" src="images/optimized/portrait.webp" alt="Portrait of Leonardo Sola" width="334" height="333" decoding="async" fetchpriority="high">
           </div>
-          <p class="availability"><span aria-hidden="true"></span> Seeking systems & robotics software roles!</p>
         </div>
       </div>
 
@@ -119,11 +123,11 @@
       <div class="container">
         <div class="simple-section-heading">
           <p class="eyebrow">Projects</p>
-          <h2 id="work-title">Featured Projects</h2>
+          <h2 id="work-title">Featured work</h2>
         </div>
 
         <div class="selected-projects">
-          <article class="selected-project" aria-labelledby="holostream-title">
+          <article class="selected-project selected-project-featured" aria-labelledby="holostream-title">
             <figure class="architecture-card selected-project-media" aria-labelledby="architecture-caption">
               <figcaption id="architecture-caption">Three vector-state architectures evaluated</figcaption>
               <div class="architecture-row">
@@ -154,6 +158,11 @@
               <div class="project-actions"><button class="text-link project-read-more" type="button" data-dialog="holostream-dialog">Read more <span aria-hidden="true">→</span></button><a class="text-link" href="https://github.com/CS-551/HoloStream-Team-8a" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
+
+          <div class="other-projects-heading">
+            <p class="eyebrow">Selected work</p>
+            <h3>Other projects</h3>
+          </div>
 
           <article class="selected-project" aria-labelledby="tumor-title">
             <img class="selected-project-media" src="images/optimized/tumor-720.webp" srcset="images/optimized/tumor-720.webp 720w, images/optimized/tumor-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), 42vw" alt="Three-dimensional tumor models and source MRI scans" width="933" height="1034" loading="lazy" decoding="async">
@@ -232,12 +241,20 @@
       <div class="container">
         <div class="section-heading section-heading-compact">
           <div>
-            <h2 id="experience-title">Leadership &amp; education</h2>
+            <h2 id="experience-title">Experience &amp; education</h2>
           </div>
         </div>
 
         <div class="experience-layout">
           <div class="timeline">
+            <article class="next-role-card" aria-labelledby="next-role-title">
+              <div class="timeline-meta">
+                <span>Next · Starting 2026</span>
+              </div>
+              <h3 id="next-role-title">Incoming Software Development Engineer</h3>
+              <p class="timeline-org">Amazon Web Services · Amazon FSx</p>
+              <p>I’ll be joining the Amazon FSx team as a Software Development Engineer, building cloud storage technology at AWS.</p>
+            </article>
             <article class="timeline-item">
               <div class="timeline-meta">
                 <span>2023–2024</span>
@@ -263,7 +280,7 @@
             <h3>Boston University</h3>
             <p class="degree">Combined BA/MS in Computer Science</p>
             <p class="education-date">2021–2026</p>
-            <p>Relevant coursework includes Distributed Systems, Computer Networking, Computational Fabrication, Applied Machine Learning, Computational Logic, and Algorithmic Data Mining.</p>
+            <p>Graduate study spanning systems, networking, algorithms, and software engineering.</p>
             <a class="text-link" href="Leonardo%20Sola%20Resume.pdf" target="_blank" rel="noopener">View full résumé <span aria-hidden="true">↗</span></a>
           </aside>
         </div>
@@ -274,16 +291,16 @@
             <h3 id="skills-title">Tools I’ve used to take projects from idea to working system.</h3>
           </div>
           <article class="skill-group">
-            <h4>Systems &amp; runtime</h4>
-            <p>Go, Java, Python, C, C++, Linux, Bash, gRPC, Docker, distributed systems, networking</p>
+            <h4>Systems &amp; infrastructure</h4>
+            <p>Go, Java, Python, C/C++, Linux, Bash, gRPC, Docker, networking</p>
           </article>
           <article class="skill-group">
-            <h4>Data &amp; search</h4>
-            <p>DuckDB, Milvus, pandas, scikit-learn, vector search, experiment and correctness tooling</p>
+            <h4>Data &amp; backend</h4>
+            <p>DuckDB, Milvus, vector search, stream processing, pandas, scikit-learn</p>
           </article>
           <article class="skill-group">
-            <h4>Engineering &amp; product</h4>
-            <p>Embedded systems, microcontrollers, testing and debugging, performance optimization, Android Studio, SolidWorks, JavaScript, React, HTML, CSS</p>
+            <h4>Other engineering</h4>
+            <p>Embedded systems, robotics, React, JavaScript, HTML, CSS, Android Studio, SolidWorks, testing and debugging</p>
           </article>
         </div>
       </div>
@@ -296,8 +313,8 @@
         </figure>
         <div class="about-copy">
           <h2 id="about-title">About me</h2>
-          <p>Hi! I’m a recent Boston University graduate who enjoys building software that has to work across machines—or interact with the physical world. I’m especially interested in distributed systems, robotics, manufacturing, and aerospace.</p>
-          <p>My favorite languages to reach for are Go, Java, and Python, depending on the problem. Outside of engineering, I enjoy hiking, photography, and gaming. I’m based in Eastern Time and always happy to talk about interesting software or engineering work.</p>
+          <p>I’m a software engineer who enjoys working on problems where performance, reliability, and thoughtful system design matter. I recently completed my M.S. in Computer Science at Boston University and will be joining AWS as a Software Development Engineer working on Amazon FSx.</p>
+          <p>My work has ranged from distributed data processing and vector search to embedded systems, robotics, and computational fabrication. My favorite languages to reach for are Go, Java, and Python, depending on the problem. Outside of engineering, I enjoy hiking, photography, and gaming.</p>
           <a class="button button-secondary about-resume-button" href="Leonardo%20Sola%20Resume.pdf" download>Download résumé</a>
         </div>
       </div>
@@ -329,8 +346,8 @@
       <div class="container contact-panel">
         <div>
           <p class="eyebrow">Get in touch</p>
-          <h2 id="contact-title">Have a role or project where I could help?</h2>
-          <p>Feel free to email me at any time. I’d be happy to share more of my work and discuss opportunities that may be a good fit for both of us. I look forward to hearing from you!</p>
+          <h2 id="contact-title">Want to connect?</h2>
+          <p>I’m always happy to connect about software engineering, interesting projects, or anything else tech-related.</p>
           <a class="contact-email" href="mailto:leonardozsola1@gmail.com">leonardozsola1@gmail.com</a>
         </div>
         <div class="contact-actions">
