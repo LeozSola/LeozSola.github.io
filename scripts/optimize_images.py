@@ -26,6 +26,9 @@ def save_webp(source: str, output_name: str, max_width: int, quality: int = 80) 
 
 
 DERIVATIVES = [
+    ("images/photography/CampingWaterfall.jpg", "gallery-camping-waterfall.webp", 1000, 80),
+    ("images/photography/FireLeaves.jpg", "gallery-fire-leaves.webp", 1000, 80),
+    ("images/photography/twoPlanes.jpg", "gallery-two-planes.webp", 1000, 80),
     ("images/BackgroundImgs/Esplanade_Skyline_Reflection_Edit.png", "skyline-1280.webp", 1280, 78),
     ("images/BackgroundImgs/Esplanade_Skyline_Reflection_Edit.png", "skyline-1920.webp", 1920, 78),
     ("images/YearbookPicEdit2.png", "portrait.webp", 420, 92),
