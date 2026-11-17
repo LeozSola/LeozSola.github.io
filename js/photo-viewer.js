@@ -6,7 +6,7 @@
   const dialog = document.createElement('dialog');
   dialog.className = 'photo-viewer';
   dialog.setAttribute('aria-label', 'Photography viewer');
-  dialog.setAttribute('aria-describedby', 'photo-viewer-help');
+  dialog.setAttribute('aria-describedby', 'photo-viewer-help photo-viewer-watermark');
   dialog.innerHTML = `
     <div class="photo-viewer-topbar">
       <div><span class="eyebrow">Photography</span><span class="photo-viewer-count" data-photo-count></span></div>
@@ -17,7 +17,6 @@
       <p class="photo-viewer-status" data-photo-status role="status"></p>
     </div>
     <div class="photo-viewer-bottom">
-      <div class="photo-viewer-caption" data-photo-caption aria-live="polite"></div>
       <div class="photo-viewer-controls" role="group" aria-label="Photo controls">
         <button type="button" data-photo-prev aria-label="Previous photo" title="Previous photo (Left arrow)">${icon('m14 6-6 6 6 6')}</button>
         <span class="photo-viewer-divider" aria-hidden="true"></span>
@@ -29,6 +28,7 @@
         <button type="button" data-photo-next aria-label="Next photo" title="Next photo (Right arrow)">${icon('m10 6 6 6-6 6')}</button>
       </div>
       <p class="photo-viewer-help" id="photo-viewer-help">Scroll or pinch to zoom · Drag to explore · Arrow keys to browse · Esc to close</p>
+      <p class="photo-viewer-watermark" id="photo-viewer-watermark">Invisible watermark: <a href="https://github.com/adobe/trustmark" target="_blank" rel="noopener noreferrer" aria-label="Learn about TrustMark P (opens in a new tab)">TrustMark P</a> (Applied to all Photos)</p>
     </div>`;
   document.body.append(dialog);
 
@@ -92,7 +92,6 @@
     status.textContent = 'Loading full-resolution photo…';
     stage.setAttribute('aria-busy', 'true');
     find('count').textContent = `${index + 1} / ${links.length}`;
-    find('caption').textContent = thumbnail.alt;
     image.alt = thumbnail.alt;
     image.onload = () => {
       if (currentRequest !== request) return;
@@ -127,6 +126,8 @@
 
   find('close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => {
+    // A queued close event may arrive after another photo has already reopened it.
+    if (dialog.open) return;
     ++request;
     image.onload = null; image.onerror = null;
     image.removeAttribute('src');

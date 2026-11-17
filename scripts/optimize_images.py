@@ -7,6 +7,7 @@ Original files remain untouched. Run from the repository root with:
 from pathlib import Path
 
 from PIL import Image, ImageOps
+from watermark_photos import preserve_export
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +16,8 @@ OUTPUT.mkdir(parents=True, exist_ok=True)
 
 
 def save_webp(source: str, output_name: str, max_width: int, quality: int = 80) -> None:
+    if preserve_export(output_name):
+        return
     with Image.open(ROOT / source) as image:
         image = ImageOps.exif_transpose(image)
         if image.width > max_width:
@@ -74,20 +77,24 @@ DERIVATIVES = [
 ]
 
 
-for derivative in DERIVATIVES:
-    save_webp(*derivative)
+def main():
+    for derivative in DERIVATIVES:
+        save_webp(*derivative)
+
+    if not preserve_export("og-preview.jpg"):
+        with Image.open(ROOT / "images" / "BackgroundImgs" / "Esplanade_Skyline_Reflection_Edit.png") as image:
+            image = ImageOps.exif_transpose(image).convert("RGB")
+            preview = ImageOps.fit(
+                image,
+                (1200, 630),
+                method=Image.Resampling.LANCZOS,
+                centering=(0.5, 0.55),
+            )
+            preview.save(OUTPUT / "og-preview.jpg", "JPEG", quality=82, optimize=True, progressive=True)
+
+    for path in sorted(OUTPUT.iterdir()):
+        print(f"{path.relative_to(ROOT)}\t{path.stat().st_size // 1024} KB")
 
 
-with Image.open(ROOT / "images" / "BackgroundImgs" / "Esplanade_Skyline_Reflection_Edit.png") as image:
-    image = ImageOps.exif_transpose(image).convert("RGB")
-    preview = ImageOps.fit(
-        image,
-        (1200, 630),
-        method=Image.Resampling.LANCZOS,
-        centering=(0.5, 0.55),
-    )
-    preview.save(OUTPUT / "og-preview.jpg", "JPEG", quality=82, optimize=True, progressive=True)
-
-
-for path in sorted(OUTPUT.iterdir()):
-    print(f"{path.relative_to(ROOT)}\t{path.stat().st_size // 1024} KB")
+if __name__ == "__main__":
+    main()

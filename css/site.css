@@ -2051,6 +2051,24 @@ body.photo-viewer-open {
 .photo-viewer-divider { width: 1px; height: 20px; margin: 0 0.2rem; background: var(--line); }
 .photo-viewer-help { margin: 0; line-height: 1.4; }
 
+.photo-viewer-watermark {
+  margin: 0;
+  padding-inline: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.photo-viewer-watermark a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.photo-viewer-watermark a:hover,
+.photo-viewer-watermark a:focus-visible {
+  color: var(--accent);
+}
+
 @media (max-width: 560px) {
   .photo-viewer { padding-left: 0.5rem; padding-right: 0.5rem; }
   .photo-viewer-topbar, .photo-viewer-caption, .photo-viewer-help { padding-inline: 0.5rem; }

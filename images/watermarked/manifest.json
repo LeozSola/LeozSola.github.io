@@ -1,0 +1,1049 @@
+{
+  "creator": "Leonardo Sola",
+  "website": "https://leonardosola.com/",
+  "copyright": "Copyright Leonardo Sola. All rights reserved.",
+  "trustmark_version": "0.9.2",
+  "model": "P",
+  "strength": 1.0,
+  "encoding": "BCH_5",
+  "photos": [
+    {
+      "source": "images/photography/CampingWaterfall.jpg",
+      "full": "images/watermarked/CampingWaterfall.jpg",
+      "preview": "images/optimized/gallery-camping-waterfall.webp",
+      "identifier": "LSCAMP01",
+      "variants": [],
+      "source_sha256": "1a1a120d9ae4406b9c675ccf8e00ca79123d18edfb208cffc71f849b3839c64b",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/CampingWaterfall.jpg",
+          "dimensions": [
+            4032,
+            3024
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "092deb8037639e5c5f018c62eb9dae81d3d63ea67b80786d2838dc7916aefb59",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 42.53
+        },
+        {
+          "path": "images/optimized/gallery-camping-waterfall.webp",
+          "dimensions": [
+            1000,
+            750
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "4d0c8278ecd4211b72e063c7ab7dd7a5001d4c05bfd76a61efbc9f9f93338a77",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 35.17
+        }
+      ]
+    },
+    {
+      "source": "images/photography/FireLeaves.jpg",
+      "full": "images/watermarked/FireLeaves.jpg",
+      "preview": "images/optimized/gallery-fire-leaves.webp",
+      "identifier": "LSFIRE01",
+      "variants": [],
+      "source_sha256": "af6b5656ab9bb606ec8a0f56a8203e42e4d879563ae8ad46d2bb0c1fca3bd8c5",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/FireLeaves.jpg",
+          "dimensions": [
+            3445,
+            1873
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "68efc43426339f287a26884987d0d2f073199d8702a4545217816fa5f47ad4f4",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 41.13
+        },
+        {
+          "path": "images/optimized/gallery-fire-leaves.webp",
+          "dimensions": [
+            1000,
+            544
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "3c045f3bd9fc67f7986fb20c04442ed64c5d1d0c44ff9b430166c701b17ef279",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 30.47
+        }
+      ]
+    },
+    {
+      "source": "images/photography/twoPlanes.jpg",
+      "full": "images/watermarked/twoPlanes.jpg",
+      "preview": "images/optimized/gallery-two-planes.webp",
+      "identifier": "LSPLAN01",
+      "variants": [],
+      "source_sha256": "f204abd8397421aec7eb77652a5952894b7e0cb7f0fdbb1bba03605b4e3d5e64",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/twoPlanes.jpg",
+          "dimensions": [
+            1368,
+            1368
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "eea21dc0813c2183983b362d93190996ccc0174936fbf97225ee2a4fc4141e7b",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 46.56
+        },
+        {
+          "path": "images/optimized/gallery-two-planes.webp",
+          "dimensions": [
+            1000,
+            1000
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "36cb3076427305769d2effe27c21eb0c3ecac9264acf98e304d3edf43f322c7e",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 44.47
+        }
+      ]
+    },
+    {
+      "source": "images/photography/FloridaSunset.jpg",
+      "full": "images/watermarked/FloridaSunset.jpg",
+      "preview": "images/optimized/gallery-florida-sunset.webp",
+      "identifier": "LSSUNS01",
+      "variants": [
+        {
+          "path": "images/optimized/florida-720.webp",
+          "width": 720,
+          "quality": 78,
+          "format": "WEBP",
+          "crop": null
+        },
+        {
+          "path": "images/optimized/florida-1400.webp",
+          "width": 1400,
+          "quality": 80,
+          "format": "WEBP",
+          "crop": null
+        }
+      ],
+      "source_sha256": "f1b84d56cdfb8d942eaf546a64b27113ce5fc59e8f8204146972882a8aa78456",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/FloridaSunset.jpg",
+          "dimensions": [
+            2969,
+            2387
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "c887c85b14f526df7a2b991ac3fb3648b1f9f6799aff96e7ba1e82d9e0c6f753",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 46.59
+        },
+        {
+          "path": "images/optimized/gallery-florida-sunset.webp",
+          "dimensions": [
+            1000,
+            804
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "622fa6c91e0ddbbd2c05569bf226f864e10e0a9ad12f988e7b8d6fc7bce3e2be",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 37.16
+        },
+        {
+          "path": "images/optimized/florida-720.webp",
+          "dimensions": [
+            720,
+            579
+          ],
+          "format": "WEBP",
+          "quality": 78,
+          "sha256": "6b06acdc7b53009f2adeb1a252fdc7585782ea399862641cb681eb01860f9ba1",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 36.15
+        },
+        {
+          "path": "images/optimized/florida-1400.webp",
+          "dimensions": [
+            1400,
+            1126
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "6acde802262b7c0c65beee69008e77df13425d19b407626c44ec28df3cdfb03d",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 37.83
+        }
+      ]
+    },
+    {
+      "source": "images/photography/photo2.jpg",
+      "full": "images/watermarked/photo2.jpg",
+      "preview": "images/optimized/gallery-lansdowne.webp",
+      "identifier": "LSLANS01",
+      "variants": [
+        {
+          "path": "images/optimized/lansdowne-720.webp",
+          "width": 720,
+          "quality": 78,
+          "format": "WEBP",
+          "crop": null
+        },
+        {
+          "path": "images/optimized/lansdowne-1400.webp",
+          "width": 1400,
+          "quality": 80,
+          "format": "WEBP",
+          "crop": null
+        }
+      ],
+      "source_sha256": "0cdfae15f84cbce588b776ba5df87cc83acdd47896b838a6b005f008f558e877",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/photo2.jpg",
+          "dimensions": [
+            4339,
+            2354
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "7cf04f9e397e1f5abccb4e813ccc951a3d7d923a06c8058409204ddba5ff7e5c",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 46.6
+        },
+        {
+          "path": "images/optimized/gallery-lansdowne.webp",
+          "dimensions": [
+            1000,
+            543
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "334816f0dcca722085acf2304d32035531e261ad26820b02cb110774557a8ac5",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 33.09
+        },
+        {
+          "path": "images/optimized/lansdowne-720.webp",
+          "dimensions": [
+            720,
+            391
+          ],
+          "format": "WEBP",
+          "quality": 78,
+          "sha256": "6960837b9b9528b83e62addb514410346b626809672912a9abf372624a121883",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 31.83
+        },
+        {
+          "path": "images/optimized/lansdowne-1400.webp",
+          "dimensions": [
+            1400,
+            760
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "de1d930517af7bc8be9a01cde0311da2bfafa8fc574c7969b8f6ca9a81f98a4a",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 34.54
+        }
+      ]
+    },
+    {
+      "source": "images/photography/photo1.jpg",
+      "full": "images/watermarked/photo1.jpg",
+      "preview": "images/optimized/gallery-aaron.webp",
+      "identifier": "LSAARO01",
+      "variants": [],
+      "source_sha256": "ea703018aa48f846dd6a85a5dcaf96cc6246c6b2416ce05ea84cc661d97a357b",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/photo1.jpg",
+          "dimensions": [
+            1514,
+            1209
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "cd9fb4acd62ae3ba7574cd4f032181ae5244507623f73e399bf303b7a3d4e55f",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 47.1
+        },
+        {
+          "path": "images/optimized/gallery-aaron.webp",
+          "dimensions": [
+            1000,
+            799
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "02362db2919cb69c7162b2181ca18d752827c8e0ba04bd5b66e89da4a7520718",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 38.54
+        }
+      ]
+    },
+    {
+      "source": "images/photography/photo3.jpg",
+      "full": "images/watermarked/photo3.jpg",
+      "preview": "images/optimized/gallery-long-exposure.webp",
+      "identifier": "LSTRAI01",
+      "variants": [
+        {
+          "path": "images/optimized/long-exposure-720.webp",
+          "width": 720,
+          "quality": 78,
+          "format": "WEBP",
+          "crop": null
+        },
+        {
+          "path": "images/optimized/long-exposure-1400.webp",
+          "width": 1400,
+          "quality": 80,
+          "format": "WEBP",
+          "crop": null
+        }
+      ],
+      "source_sha256": "33ba2f1add363dc52a53783c2ea94bc5ea6996cb00de721c427f293bd55f33cf",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/photo3.jpg",
+          "dimensions": [
+            4778,
+            3456
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "249672fb1c1cd5df71bd9339f98d20a29e704dbff844eeaa83c404b98b2e7a98",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 48.6
+        },
+        {
+          "path": "images/optimized/gallery-long-exposure.webp",
+          "dimensions": [
+            1000,
+            723
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "c00d98de4997b7d251123a581130f6a85c6b101f18ec5a46f23a9a5aa67d04c8",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 40.12
+        },
+        {
+          "path": "images/optimized/long-exposure-720.webp",
+          "dimensions": [
+            720,
+            521
+          ],
+          "format": "WEBP",
+          "quality": 78,
+          "sha256": "961d7f66508e96c4b6de918c7b492cbec76dd2c26bb6903330fc4d465e7c05f1",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 39.39
+        },
+        {
+          "path": "images/optimized/long-exposure-1400.webp",
+          "dimensions": [
+            1400,
+            1013
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "0d2ce31238d6d8a5fe3f57b3b7b0401c6f2319a57236b2f510d700f629c270f4",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 41.02
+        }
+      ]
+    },
+    {
+      "source": "images/photography/Esplanade Skyline Reflection Edit.png",
+      "full": "images/watermarked/Esplanade Skyline Reflection Edit.jpg",
+      "preview": "images/optimized/gallery-esplanade.webp",
+      "identifier": "LSESPL01",
+      "variants": [
+        {
+          "path": "images/optimized/skyline-1280.webp",
+          "width": 1280,
+          "quality": 78,
+          "format": "WEBP",
+          "crop": null
+        },
+        {
+          "path": "images/optimized/skyline-1920.webp",
+          "width": 1920,
+          "quality": 78,
+          "format": "WEBP",
+          "crop": null
+        },
+        {
+          "path": "images/optimized/og-preview.jpg",
+          "width": 1200,
+          "quality": 82,
+          "format": "JPEG",
+          "crop": [
+            1200,
+            630
+          ]
+        }
+      ],
+      "source_sha256": "c3df42981848380e17805e35c72a3738ecced2d1b185b70969a7a299ac415f8f",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/Esplanade Skyline Reflection Edit.jpg",
+          "dimensions": [
+            4568,
+            3200
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "126f2621a5e1ed5f50a5f54036158e4313401108d0f98ce32658f42a4e9cf1ac",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 43.92
+        },
+        {
+          "path": "images/optimized/gallery-esplanade.webp",
+          "dimensions": [
+            1000,
+            701
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "66a84a6faaca0e8e23251a224c110601b5b7e874f59d0dd9f141ba4a5b5ee06f",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 37.32
+        },
+        {
+          "path": "images/optimized/skyline-1280.webp",
+          "dimensions": [
+            1280,
+            897
+          ],
+          "format": "WEBP",
+          "quality": 78,
+          "sha256": "9c9ed93bc569da94cd0236c47df90ac2314cd52d058f7a14ff87e0f3791729e0",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 37.17
+        },
+        {
+          "path": "images/optimized/skyline-1920.webp",
+          "dimensions": [
+            1920,
+            1345
+          ],
+          "format": "WEBP",
+          "quality": 78,
+          "sha256": "b4865c6d6801a0c5bfe933e0fb08b17e408cbe15f9bfa01c367a0df1375f961b",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 37.1
+        },
+        {
+          "path": "images/optimized/og-preview.jpg",
+          "dimensions": [
+            1200,
+            630
+          ],
+          "format": "JPEG",
+          "quality": 82,
+          "sha256": "07f22bbc486f49ebbc4799a2346ff624b216c1f1046369d463f343e5af4137f9",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 37.37
+        }
+      ]
+    },
+    {
+      "source": "images/photography/NYC Batman Stock 1.png",
+      "full": "images/watermarked/NYC Batman Stock 1.jpg",
+      "preview": "images/optimized/gallery-batman.webp",
+      "identifier": "LSBATM01",
+      "variants": [],
+      "source_sha256": "360f931cab8b8c7ab1aa4066cd07576235a30768ed96074a3004a67e273ac6ab",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/NYC Batman Stock 1.jpg",
+          "dimensions": [
+            3690,
+            2768
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "4abfd180a2b0f734505f62723bb6c5c3f9e3d9113a199e6d3c1c8f23be845a9f",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 42.2
+        },
+        {
+          "path": "images/optimized/gallery-batman.webp",
+          "dimensions": [
+            1000,
+            750
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "5da804c51ea77c068c5016b63b162e010c1e4e70852eb15485d376f298d0dd6c",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 32.68
+        }
+      ]
+    },
+    {
+      "source": "images/photography/Building across from Yawkey.png",
+      "full": "images/watermarked/Building across from Yawkey.jpg",
+      "preview": "images/optimized/gallery-yawkey.webp",
+      "identifier": "LSYAWK01",
+      "variants": [],
+      "source_sha256": "5ab88efb7f61e47a33a434770541977580fc20833c83567c55dedfbee4c4a4ce",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/Building across from Yawkey.jpg",
+          "dimensions": [
+            3001,
+            4000
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "adb36948d1fa270582edce0e3c3498c1f8a1fb4e4c9c596fd84cb8bfd537b824",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 47.27
+        },
+        {
+          "path": "images/optimized/gallery-yawkey.webp",
+          "dimensions": [
+            1000,
+            1333
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "1ac9e41fd960a54b3eca78fffa1bd2651fc27d73fae333277cbd3c104143910f",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 42.23
+        }
+      ]
+    },
+    {
+      "source": "images/photography/CDS Warm.png",
+      "full": "images/watermarked/CDS Warm.jpg",
+      "preview": "images/optimized/gallery-cds.webp",
+      "identifier": "LSCDSW01",
+      "variants": [],
+      "source_sha256": "2ae38a69fd1b1b2f90ce42b6cbbba7e0766a73f34da6516738b656ddbf9f3f87",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/CDS Warm.jpg",
+          "dimensions": [
+            3688,
+            2528
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "79c45216d61665427873297bf4faf89db857f48a5371a0fca94fc8534db9d304",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 43.3
+        },
+        {
+          "path": "images/optimized/gallery-cds.webp",
+          "dimensions": [
+            1000,
+            685
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "0ae4a357177feb753db0b721fe3d10944b21ba4fc396704f87cf4cfec5cb856d",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 34.82
+        }
+      ]
+    },
+    {
+      "source": "images/photography/photo4.jpg",
+      "full": "images/watermarked/photo4.jpg",
+      "preview": "images/optimized/gallery-rooftop.webp",
+      "identifier": "LSROOF01",
+      "variants": [],
+      "source_sha256": "64e00ba327d639491d7e00502ff4a9613735ccb228b264ee29ed91d79af42a96",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/photo4.jpg",
+          "dimensions": [
+            5184,
+            3456
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "6ae5fd7e59931dd9bac764eefaed2663acfaf91d17529495d9cb4a6ca0ec52cf",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 49.76
+        },
+        {
+          "path": "images/optimized/gallery-rooftop.webp",
+          "dimensions": [
+            1000,
+            667
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "41a339e21698ccf50d02535d40b5fcebf8803e96b2130b66995f9363fd24e396",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 39.67
+        }
+      ]
+    },
+    {
+      "source": "images/photography/car2.jpg",
+      "full": "images/watermarked/car2.jpg",
+      "preview": "images/optimized/gallery-storrow.webp",
+      "identifier": "LSSTOR01",
+      "variants": [],
+      "source_sha256": "f97f1665404226e50fd4bda4a96067c2e5e9bd5c864a9ec59c42fcf45f7ae382",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/car2.jpg",
+          "dimensions": [
+            3703,
+            2289
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "3ed7d1d77a721cefc1b3b9c7374785cbab0ac8e0284b9f36a07cf819a24f07fe",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 48.35
+        },
+        {
+          "path": "images/optimized/gallery-storrow.webp",
+          "dimensions": [
+            1000,
+            618
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "51e8fee87841f0ad0e6313c950d1185cc7dd5e05585a8dd1b9a077b38c1d3e02",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 36.88
+        }
+      ]
+    },
+    {
+      "source": "images/photography/JoeBWPortWoodAl.jpg",
+      "full": "images/watermarked/JoeBWPortWoodAl.jpg",
+      "preview": "images/optimized/gallery-joe.webp",
+      "identifier": "LSJOEB01",
+      "variants": [],
+      "source_sha256": "1db34f3057e25c58269eebd59a463ce9a976ebf23b68fb782821fef453868101",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/JoeBWPortWoodAl.jpg",
+          "dimensions": [
+            3094,
+            3090
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "f67004952aaa26ee31b2415e360a538c058f9e189959bdf818282933209d37c5",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 47.09
+        },
+        {
+          "path": "images/optimized/gallery-joe.webp",
+          "dimensions": [
+            1000,
+            999
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "056f705f5add9602531888ca9975314fac26f3a0dfdcae19facc3508471dbefc",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 39.49
+        }
+      ]
+    },
+    {
+      "source": "images/photography/solaChoiceSet-3.jpg",
+      "full": "images/watermarked/solaChoiceSet-3.jpg",
+      "preview": "images/optimized/gallery-anniversary.webp",
+      "identifier": "LSANNI01",
+      "variants": [],
+      "source_sha256": "07ae4be7d8ccd4184d64c0f9235153224911680c06706b3e8e3ac89ea6dd5b6e",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/solaChoiceSet-3.jpg",
+          "dimensions": [
+            4277,
+            2469
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "0976b6b0dbc8688f86798a44f99173bb7fdd78f01a542704fafba9beff43bc34",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 47.88
+        },
+        {
+          "path": "images/optimized/gallery-anniversary.webp",
+          "dimensions": [
+            1000,
+            577
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "aa73146d44e722f529f91bedf9692ae21110288a0e80c1ee373ccec8f68e3cee",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 33.59
+        }
+      ]
+    },
+    {
+      "source": "images/photography/Fenway Bridge.png",
+      "full": "images/watermarked/Fenway Bridge.jpg",
+      "preview": "images/optimized/gallery-fenway.webp",
+      "identifier": "LSFENW01",
+      "variants": [],
+      "source_sha256": "5c904546f542c78e6382d1497423b7011ef336753d42d1dc99cda81b33b3527e",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/Fenway Bridge.jpg",
+          "dimensions": [
+            2985,
+            2323
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "986f104f8fe24707c3370f7eb800336d17ebff13beb9cdd0dd41777a8fc17ba5",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 42.65
+        },
+        {
+          "path": "images/optimized/gallery-fenway.webp",
+          "dimensions": [
+            1000,
+            778
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "cd1f60f549340f252cf32c93179975fec3ad8c81777602002696f8717002dc79",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 34.92
+        }
+      ]
+    },
+    {
+      "source": "images/photography/solaFinal11.jpg",
+      "full": "images/watermarked/solaFinal11.jpg",
+      "preview": "images/optimized/gallery-skating-coach.webp",
+      "identifier": "LSCOAC01",
+      "variants": [],
+      "source_sha256": "6b58e563c6574f169e6f781534969dfbfe9fc4cf98e2d06770a2207a5bfa11f0",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/solaFinal11.jpg",
+          "dimensions": [
+            3247,
+            2996
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "aad827ff72afc715778b1101788ae3e33825eea1e0cedb2cbb7101387d93a252",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 47.5
+        },
+        {
+          "path": "images/optimized/gallery-skating-coach.webp",
+          "dimensions": [
+            1000,
+            923
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "0da9b4afd46b070ff51844cbb7bb5bfe7c810e5d078f3e646cbdb5c11b91ed06",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 38.26
+        }
+      ]
+    },
+    {
+      "source": "images/photography/solaFinal12.jpg",
+      "full": "images/watermarked/solaFinal12.jpg",
+      "preview": "images/optimized/gallery-skating-gauging.webp",
+      "identifier": "LSGAUG01",
+      "variants": [],
+      "source_sha256": "5ad4ccbb1e92fd8f7aaea6427c8c815f4cce4d521e31d7a60ddf901d9f3ac002",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/solaFinal12.jpg",
+          "dimensions": [
+            4168,
+            2269
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "a1d520fd4889c909b588196e209e8a6a63d0561c5d37b7a46ae38c916a5cff60",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 49.39
+        },
+        {
+          "path": "images/optimized/gallery-skating-gauging.webp",
+          "dimensions": [
+            1000,
+            544
+          ],
+          "format": "WEBP",
+          "quality": 85,
+          "sha256": "65eb26b010f0afe7a4d20c3401ac5fe0dcb89b90be563b1032f2f984187566d3",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 37.65
+        }
+      ]
+    },
+    {
+      "source": "images/photography/solaFinal16.jpg",
+      "full": "images/watermarked/solaFinal16.jpg",
+      "preview": "images/optimized/gallery-skating-teaching.webp",
+      "identifier": "LSTEAC01",
+      "variants": [],
+      "source_sha256": "50f31e8c665e31ca823a8f3b37f20740961fb110e5871d7576ea0ad8acd25f9d",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/solaFinal16.jpg",
+          "dimensions": [
+            2370,
+            1081
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "36f1a2225b9e6657fac5c1f4df333f7299975f3338fda33e11cd91e762ee3b2c",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 49.43
+        },
+        {
+          "path": "images/optimized/gallery-skating-teaching.webp",
+          "dimensions": [
+            1000,
+            456
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "b1cf394d99ce311c37b7f7abe6ef04a444235b3e25eee1122222a8d8dd4b438a",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 36.79
+        }
+      ]
+    },
+    {
+      "source": "images/photography/solaFinal5.jpg",
+      "full": "images/watermarked/solaFinal5.jpg",
+      "preview": "images/optimized/gallery-skating-pair.webp",
+      "identifier": "LSPAIR01",
+      "variants": [],
+      "source_sha256": "9b3b1413458f444041e26ad88fb300a63c047c7fe1d9a4d4cb1d46d19b27af44",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/solaFinal5.jpg",
+          "dimensions": [
+            4103,
+            2621
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "3238e5ce812aef9cc4913af510dfebc10b9dac312db2022aabcd5592e7038161",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 48.44
+        },
+        {
+          "path": "images/optimized/gallery-skating-pair.webp",
+          "dimensions": [
+            1000,
+            639
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "6957ae2bfc6ede00dfbc12b2e3e19f3d6acee20aeb0ea7d0d4eab2acddb75aa5",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 39.47
+        }
+      ]
+    },
+    {
+      "source": "images/photography/solaFinal7.jpg",
+      "full": "images/watermarked/solaFinal7.jpg",
+      "preview": "images/optimized/gallery-skating-solo.webp",
+      "identifier": "LSSOLO07",
+      "variants": [],
+      "source_sha256": "7b3ef0571ff5d0fe31ae37a726766ee4f73834cd42f6d108584b7525f28ac9c3",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/solaFinal7.jpg",
+          "dimensions": [
+            2306,
+            2718
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "a4a3ca2adc8b49790952efb6ac802459229789400a63bc841bf2194dc83132bb",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 47.42
+        },
+        {
+          "path": "images/optimized/gallery-skating-solo.webp",
+          "dimensions": [
+            1000,
+            1179
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "22f1714d1d1451f94e551f6cee064d30a36a1cb7beb57f77c30a26be81ad0e29",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 39.88
+        }
+      ]
+    },
+    {
+      "source": "images/photography/Tower Chairs Edit.png",
+      "full": "images/watermarked/Tower Chairs Edit.jpg",
+      "preview": "images/optimized/gallery-tower-chairs.webp",
+      "identifier": "LSTOWE01",
+      "variants": [],
+      "source_sha256": "21ac5314efef19eb8dc940c86baf9a3a27b8e211526c4bd5b5a3bf9573925f2b",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/Tower Chairs Edit.jpg",
+          "dimensions": [
+            3862,
+            1468
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "65f7598283190ec2d532a819c74df1cbcd5c1f3cdfd6a3e9609dd9116a1972dc",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 44.24
+        },
+        {
+          "path": "images/optimized/gallery-tower-chairs.webp",
+          "dimensions": [
+            1000,
+            380
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "1d99849eb9deaebf5928a89edd9a3f6470c6c3e67e0a18083bfe465058902857",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 36.03
+        }
+      ]
+    },
+    {
+      "source": "images/photography/IMG_20220827_013123.jpg",
+      "full": "images/watermarked/IMG_20220827_013123.jpg",
+      "preview": "images/optimized/gallery-suffolk-bridge.webp",
+      "identifier": "LSSUFF01",
+      "variants": [],
+      "source_sha256": "06ded0a328ff3bce7463ed5c18003ecc418c473fb5cce9d6810c24080b42b8bc",
+      "original_watermark_detected": false,
+      "outputs": [
+        {
+          "path": "images/watermarked/IMG_20220827_013123.jpg",
+          "dimensions": [
+            3000,
+            4000
+          ],
+          "format": "JPEG",
+          "quality": 95,
+          "sha256": "2f06125ab2402c2a9c7b1741709862e1e5f9d9c2817cad2e74a0706284edc449",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 43.22
+        },
+        {
+          "path": "images/optimized/gallery-suffolk-bridge.webp",
+          "dimensions": [
+            1000,
+            1333
+          ],
+          "format": "WEBP",
+          "quality": 80,
+          "sha256": "abf18899cc26aa5055008aad094f9d01cc8e8f3ddd9355ff35f0ef3053755808",
+          "watermark_verified": true,
+          "metadata_verified": true,
+          "psnr_db_after_compression": 34.29
+        }
+      ]
+    }
+  ]
+}
