@@ -25,7 +25,7 @@
     });
 
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
+      if (event.key === 'Escape' && navLinks.classList.contains('is-open')) {
         closeNavigation();
         toggle.focus();
       }
