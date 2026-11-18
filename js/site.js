@@ -95,6 +95,7 @@
       if (!(dialog instanceof HTMLDialogElement)) return;
       activeDialogTrigger = trigger;
       dialog.showModal();
+      dialog.scrollTop = 0;
       document.body.classList.add('dialog-open');
       dialog.querySelector('[data-dialog-close]')?.focus();
     });
@@ -112,7 +113,7 @@
 
     dialog.addEventListener('close', () => {
       document.body.classList.remove('dialog-open');
-      activeDialogTrigger?.focus();
+      activeDialogTrigger?.focus({ preventScroll: true });
       activeDialogTrigger = null;
     });
   });

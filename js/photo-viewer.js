@@ -17,6 +17,7 @@
       <p class="photo-viewer-status" data-photo-status role="status"></p>
     </div>
     <div class="photo-viewer-bottom">
+      <p class="photo-viewer-caption" data-photo-caption></p>
       <div class="photo-viewer-controls" role="group" aria-label="Photo controls">
         <button type="button" data-photo-prev aria-label="Previous photo" title="Previous photo (Left arrow)">${icon('m14 6-6 6 6 6')}</button>
         <span class="photo-viewer-divider" aria-hidden="true"></span>
@@ -92,6 +93,7 @@
     status.textContent = 'Loading full-resolution photo…';
     stage.setAttribute('aria-busy', 'true');
     find('count').textContent = `${index + 1} / ${links.length}`;
+    find('caption').textContent = thumbnail.alt;
     image.alt = thumbnail.alt;
     image.onload = () => {
       if (currentRequest !== request) return;

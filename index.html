@@ -6,7 +6,7 @@
   <title>Leonardo Sola — Software Engineer | Distributed Systems &amp; Cloud Infrastructure</title>
   <meta name="description" content="Portfolio of Leonardo Sola, an AWS software development engineer focused on distributed systems, cloud infrastructure, and reliable software at scale.">
   <meta name="author" content="Leonardo Sola">
-  <meta name="theme-color" content="#07101d">
+  <meta name="theme-color" content="#11171b">
   <link rel="canonical" href="https://leonardosola.com/">
 
   <meta property="og:type" content="website">
@@ -19,8 +19,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="images/optimized/skyline-1280.webp" imagesrcset="images/optimized/skyline-1280.webp 1280w, images/optimized/skyline-1920.webp 1920w" imagesizes="100vw" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="css/site.css">
 
@@ -58,7 +57,6 @@
   <header class="site-header" data-site-header>
     <nav class="nav-shell" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Leonardo Sola, home">
-        <img class="brand-mark" src="images/optimized/portrait.webp" alt="" width="42" height="42" aria-hidden="true" decoding="async">
         <span class="brand-name">Leonardo Sola</span>
       </a>
 
@@ -82,21 +80,20 @@
 
   <main id="main-content">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-backdrop" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Software engineer · Distributed systems · Cloud infrastructure</p>
-          <h1 id="hero-title">Hi, I’m <span>Leonardo Sola!</span></h1>
+          <p class="eyebrow">Distributed systems &amp; cloud infrastructure</p>
+          <h1 id="hero-title">Leonardo Sola</h1>
+          <p class="hero-role">Software engineer.</p>
           <p class="hero-lede">I build reliable software for data-intensive and physical systems—from streaming vector search to rocket avionics and computational fabrication.</p>
           <div class="hero-next" aria-label="Current position">
-            <span class="hero-next-label">SDE @ AWS</span>
-            <span class="hero-next-team">Amazon FSx</span>
+            <span class="hero-next-label">Currently at AWS</span>
+            <span class="hero-next-team">Software Development Engineer · Amazon FSx</span>
           </div>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#work">View featured work</a>
-            <a class="button button-secondary" href="Leonardo%20Sola%20Resume.pdf" target="_blank" rel="noopener">View résumé</a>
-            <a class="button button-secondary" href="#photography">View photography</a>
+            <a class="button button-primary" href="#work">Explore projects <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="Leonardo%20Sola%20Resume.pdf" target="_blank" rel="noopener">View résumé <span aria-hidden="true">↗</span></a>
           </div>
 
           <div class="hero-links" aria-label="Professional profiles">
@@ -115,7 +112,7 @@
           <div class="portrait-frame">
             <img class="hero-portrait" src="images/optimized/portrait.webp" alt="Portrait of Leonardo Sola" width="334" height="333" decoding="async" fetchpriority="high">
           </div>
-          <p class="hero-credential"><span>M.S. in Computer Science</span><span>Boston University</span></p>
+          <p class="hero-credential"><span>M.S. Computer Science</span><span>Boston University</span></p>
         </div>
       </div>
 
@@ -124,14 +121,22 @@
     <section class="section section-work" id="work" aria-labelledby="work-title">
       <div class="container">
         <div class="simple-section-heading">
-          <p class="eyebrow">Projects</p>
+          <p class="eyebrow"><span class="section-index">01 /</span> Projects</p>
           <h2 id="work-title">Featured work</h2>
         </div>
 
         <div class="selected-projects">
           <article class="selected-project selected-project-featured" aria-labelledby="holostream-title">
+            <div class="selected-project-content">
+              <p class="project-kicker">Distributed systems · Vector search</p>
+              <h3 id="holostream-title">HoloStream Vector Search</h3>
+              <p>On a five-person team, we added real-time KNN search to a Go streaming engine and benchmarked three vector-state architectures on SIFT1M across one, two, and four workers.</p>
+              <p class="project-contribution"><strong>My contribution</strong> Reworked the backend RPC path to support heterogeneous state backends across workers.</p>
+              <ul class="tag-list"><li>Go</li><li>gRPC</li><li>DuckDB</li><li>Milvus</li></ul>
+              <div class="project-actions"><button class="text-link project-read-more" type="button" data-dialog="holostream-dialog" aria-controls="holostream-dialog" aria-haspopup="dialog" aria-label="Read HoloStream Vector Search project details">Read case study <span aria-hidden="true">→</span></button><a class="text-link" href="https://github.com/CS-551/HoloStream-Team-8a" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div>
+            </div>
             <figure class="architecture-card selected-project-media" aria-labelledby="architecture-caption">
-              <figcaption id="architecture-caption">Three vector-state architectures evaluated</figcaption>
+              <figcaption id="architecture-caption"><span class="diagram-index">System study / 01</span>Vector-state architectures</figcaption>
               <div class="architecture-row">
                 <span class="architecture-label">Remote</span>
                 <span class="architecture-node">HoloStream</span>
@@ -150,69 +155,62 @@
                 <span class="architecture-arrow architecture-arrow-peer" aria-hidden="true">↔</span>
                 <span class="architecture-node architecture-node-accent">Peer workers</span>
               </div>
-              <div class="architecture-metrics"><span>Correctness</span><span>Latency</span><span>Throughput</span><span>Scaling</span></div>
+              <div class="architecture-metrics"><span><strong>1M</strong> SIFT vectors</span><span><strong>3</strong> architectures</span><span><strong>1 / 2 / 4</strong> workers</span></div>
+              <p class="architecture-note">Evaluated for correctness, latency, throughput, and scaling.</p>
             </figure>
-            <div class="selected-project-content">
-              <p class="project-kicker">Distributed systems · Vector search</p>
-              <h3 id="holostream-title">HoloStream Vector Search</h3>
-              <p>On a five-person team, we added real-time KNN search to a Go streaming engine and benchmarked three vector-state architectures on SIFT1M across one, two, and four workers.</p>
-              <ul class="tag-list"><li>Go</li><li>gRPC</li><li>DuckDB</li><li>Milvus</li></ul>
-              <div class="project-actions"><button class="text-link project-read-more" type="button" data-dialog="holostream-dialog">Read more <span aria-hidden="true">→</span></button><a class="text-link" href="https://github.com/CS-551/HoloStream-Team-8a" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div>
-            </div>
           </article>
 
           <div class="other-projects-heading">
-            <p class="eyebrow">Selected work</p>
-            <h3>Other projects</h3>
+            <p>Other projects</p>
           </div>
 
           <article class="selected-project" aria-labelledby="tumor-title">
-            <img class="selected-project-media" src="images/optimized/tumor-720.webp" srcset="images/optimized/tumor-720.webp 720w, images/optimized/tumor-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), 42vw" alt="Three-dimensional tumor models and source MRI scans" width="933" height="1034" loading="lazy" decoding="async">
+            <div class="project-image project-image-mri"><img class="selected-project-media" src="images/optimized/mri-comparison-1200.webp" alt="MRI slices compared with a reconstructed three-dimensional tumor model" width="1200" height="877" loading="lazy" decoding="async"></div>
             <div class="selected-project-content">
               <p class="project-kicker">Computational fabrication · Medical imaging</p>
               <h3 id="tumor-title">MRI-Based 3D Printed Tumor Models</h3>
               <p>Our team built a pipeline that transforms segmented MRI scans into printable 3D tumor models, giving doctors a physical way to inspect complex anatomy before an operation.</p>
               <ul class="tag-list"><li>Python</li><li>Marching Cubes</li><li>3D fabrication</li></ul>
-              <div class="project-actions"><button class="text-link project-read-more" type="button" data-dialog="tumor-dialog">Read more <span aria-hidden="true">→</span></button><a class="text-link" href="https://gitlab.com/cs581/mri-tumor-data" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div>
+              <div class="project-actions"><button class="text-link project-read-more" type="button" data-dialog="tumor-dialog" aria-controls="tumor-dialog" aria-haspopup="dialog" aria-label="Read MRI-Based 3D Printed Tumor Models project details">Project details <span aria-hidden="true">→</span></button><a class="text-link" href="https://gitlab.com/cs581/mri-tumor-data" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
 
           <article class="selected-project" aria-labelledby="rocket-title">
-            <img class="selected-project-media selected-project-media-contain" src="images/optimized/irec-720.webp" srcset="images/optimized/irec-720.webp 720w, images/optimized/irec-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), 42vw" alt="BURPG rocket avionics control panel" width="1396" height="1612" loading="lazy" decoding="async">
+            <div class="project-image project-image-rocket"><img class="selected-project-media" src="images/optimized/irec-720.webp" srcset="images/optimized/irec-720.webp 720w, images/optimized/irec-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1240px) 45vw, 550px" alt="BURPG rocket airframe diagram and Teensy flight computer hardware" width="1396" height="1612" loading="lazy" decoding="async"></div>
             <div class="selected-project-content">
               <p class="project-kicker">Embedded systems · Aerospace</p>
               <h3 id="rocket-title">BURPG IREC Rocket</h3>
               <p>I helped build and test a Teensy 4.1-based flight computer that controlled telemetry, ejection charges, data recording, and parachute deployment.</p>
               <ul class="tag-list"><li>Teensy 4.1</li><li>Telemetry</li><li>Hardware testing</li></ul>
-              <button class="text-link project-read-more" type="button" data-dialog="rocket-dialog">Read more <span aria-hidden="true">→</span></button>
+              <button class="text-link project-read-more" type="button" data-dialog="rocket-dialog" aria-controls="rocket-dialog" aria-haspopup="dialog" aria-label="Read BURPG IREC Rocket project details">Project details <span aria-hidden="true">→</span></button>
             </div>
           </article>
 
           <article class="selected-project" aria-labelledby="natura-title">
-            <img class="selected-project-media" src="images/optimized/natura-720.webp" srcset="images/optimized/natura-720.webp 720w, images/optimized/natura-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), 42vw" alt="Natura scenic route planner map and interface" width="1696" height="1975" loading="lazy" decoding="async">
+            <div class="project-image project-image-natura"><img class="selected-project-media" src="images/optimized/natura-720.webp" srcset="images/optimized/natura-720.webp 720w, images/optimized/natura-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1240px) 45vw, 550px" alt="Natura scenic route planner map and interface" width="1696" height="1975" loading="lazy" decoding="async"></div>
             <div class="selected-project-content">
               <p class="project-kicker">Geospatial software · Computer vision</p>
               <h3 id="natura-title">Natura</h3>
               <p>A scenic route planner that combines open map data and street-level imagery to score and compare the most scenic drives between two points.</p>
               <ul class="tag-list"><li>OpenStreetMap</li><li>Mapillary</li><li>OSRM</li></ul>
-              <div class="project-actions"><button class="text-link project-read-more" type="button" data-dialog="natura-dialog">Read more <span aria-hidden="true">→</span></button><a class="text-link" href="https://github.com/LeozSola/Natura" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div>
+              <div class="project-actions"><button class="text-link project-read-more" type="button" data-dialog="natura-dialog" aria-controls="natura-dialog" aria-haspopup="dialog" aria-label="Read Natura project details">Project details <span aria-hidden="true">→</span></button><a class="text-link" href="https://github.com/LeozSola/Natura" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
 
           <article class="selected-project" aria-labelledby="easynote-title">
-            <img class="selected-project-media selected-project-media-contain" src="images/optimized/easynote-720.webp" srcset="images/optimized/easynote-720.webp 720w, images/optimized/easynote-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), 42vw" alt="EasyNote note-taking project logo" width="1396" height="1612" loading="lazy" decoding="async">
+            <div class="project-image project-image-easynote"><img class="selected-project-media" src="images/optimized/easynote-720.webp" srcset="images/optimized/easynote-720.webp 720w, images/optimized/easynote-1200.webp 1200w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1240px) 45vw, 550px" alt="EasyNote note-taking project logo" width="1396" height="1612" loading="lazy" decoding="async"></div>
             <div class="selected-project-content">
               <p class="project-kicker">Hackathon winner · Education software</p>
               <h3 id="easynote-title">EasyNote</h3>
               <p>I led a three-person team building a Chrome extension that turns YouTube videos into study guides. EasyNote won its division at BostonHacks.</p>
               <ul class="tag-list"><li>Python</li><li>Node.js</li><li>Chrome extension</li></ul>
-              <div class="project-actions"><button class="text-link project-read-more" type="button" data-dialog="easynote-dialog">Read more <span aria-hidden="true">→</span></button><a class="text-link" href="https://devpost.com/software/easynote" target="_blank" rel="noopener noreferrer">View Devpost <span aria-hidden="true">↗</span></a></div>
+              <div class="project-actions"><button class="text-link project-read-more" type="button" data-dialog="easynote-dialog" aria-controls="easynote-dialog" aria-haspopup="dialog" aria-label="Read EasyNote project details">Project details <span aria-hidden="true">→</span></button><a class="text-link" href="https://devpost.com/software/easynote" target="_blank" rel="noopener noreferrer">View Devpost <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
         </div>
 
         <div class="additional-work">
-          <div class="additional-work-heading"><h3>Additional Projects</h3></div>
+          <div class="additional-work-heading"><h3>Additional projects</h3></div>
           <div class="compact-projects">
             <article class="compact-project">
               <div class="compact-project-title">
@@ -221,7 +219,7 @@
               </div>
               <div class="compact-project-summary">
                 <p>Worked with a team to prepare, visualize, model, and evaluate a real-world dataset using pandas and scikit-learn.</p>
-                <div class="project-actions"><button class="text-link project-read-more" type="button" data-dialog="datathon-dialog">Read more <span aria-hidden="true">→</span></button><a class="text-link" href="https://github.com/amv1225/MiniHacks2022" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div>
+                <div class="project-actions"><button class="text-link project-read-more" type="button" data-dialog="datathon-dialog" aria-controls="datathon-dialog" aria-haspopup="dialog" aria-label="Read Predictive Model project details">Project details <span aria-hidden="true">→</span></button><a class="text-link" href="https://github.com/amv1225/MiniHacks2022" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div>
               </div>
             </article>
             <article class="compact-project">
@@ -231,7 +229,7 @@
               </div>
               <div class="compact-project-summary">
                 <p>Built a React interface and Python backend that generate social-media captions, hashtags, and post descriptions from user prompts.</p>
-                <button class="text-link project-read-more" type="button" data-dialog="chatgptinsta-dialog">Read more <span aria-hidden="true">→</span></button>
+                <button class="text-link project-read-more" type="button" data-dialog="chatgptinsta-dialog" aria-controls="chatgptinsta-dialog" aria-haspopup="dialog" aria-label="Read ChatGPTInsta project details">Project details <span aria-hidden="true">→</span></button>
               </div>
             </article>
           </div>
@@ -243,6 +241,7 @@
       <div class="container">
         <div class="section-heading section-heading-compact">
           <div>
+            <p class="eyebrow"><span class="section-index">02 /</span> Background</p>
             <h2 id="experience-title">Experience &amp; education</h2>
           </div>
         </div>
@@ -290,7 +289,7 @@
         <div class="skills-grid" aria-labelledby="skills-title">
           <div class="skills-intro">
             <p class="eyebrow">Capabilities</p>
-            <h3 id="skills-title">Tools I’ve used to take projects from idea to working system.</h3>
+            <h3 id="skills-title">Technical skills</h3>
           </div>
           <article class="skill-group">
             <h4>Systems &amp; infrastructure</h4>
@@ -314,6 +313,7 @@
           <img src="images/optimized/about-720.webp" alt="Leonardo Sola outdoors" width="720" height="540" loading="lazy" decoding="async">
         </figure>
         <div class="about-copy">
+          <p class="eyebrow"><span class="section-index">03 /</span> About</p>
           <h2 id="about-title">About me</h2>
           <p>I’m a software engineer who enjoys working on problems where performance, reliability, and thoughtful system design matter. I recently completed my M.S. in Computer Science at Boston University and work at AWS as a Software Development Engineer on Amazon FSx.</p>
           <p>My work has ranged from distributed data processing and vector search to embedded systems, robotics, and computational fabrication. My favorite languages to reach for are Go, Java, and Python, depending on the problem. Outside of engineering, I enjoy hiking, photography, and gaming.</p>
@@ -325,9 +325,14 @@
     <section class="section photography" id="photography" aria-labelledby="photography-title">
       <div class="container">
         <div class="simple-section-heading photography-heading">
-          <p class="eyebrow">Photography · 2019–2026</p>
-          <h2 id="photography-title">Creativity outside of the office.</h2>
+          <p class="eyebrow"><span class="section-index">04 /</span> Photography · 2019–2026</p>
+          <h2 id="photography-title">Photography</h2>
         </div>
+
+        <figure class="photography-panorama">
+          <img src="images/optimized/skyline-1280.webp" srcset="images/optimized/skyline-1280.webp 1280w, images/optimized/skyline-1920.webp 1920w" sizes="(max-width: 1240px) calc(100vw - 3rem), 1160px" alt="Boston skyline reflected across the Charles River at night" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>Boston skyline</figcaption>
+        </figure>
 
         <div class="photo-grid">
           <a class="photo-card photo-card-wide" href="images/watermarked/FloridaSunset.jpg">
@@ -356,8 +361,8 @@
     <section class="section section-contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact-panel">
         <div>
-          <p class="eyebrow">Get in touch</p>
-          <h2 id="contact-title">Want to connect?</h2>
+          <p class="eyebrow"><span class="section-index">05 /</span> Contact</p>
+          <h2 id="contact-title">Get in touch</h2>
           <p>I’m always happy to connect about software engineering, interesting projects, or anything else tech-related.</p>
           <a class="contact-email" href="mailto:leonardozsola1@gmail.com">leonardozsola1@gmail.com</a>
         </div>
@@ -372,15 +377,15 @@
   <dialog class="project-dialog" id="tumor-dialog" aria-labelledby="tumor-dialog-title">
     <div class="project-dialog-shell">
       <button class="dialog-close" type="button" data-dialog-close aria-label="Close MRI-Based 3D Printed Tumor Models details">×</button>
-      <div class="project-dialog-gallery project-dialog-gallery-split">
-        <img src="images/optimized/mri-comparison-1200.webp" alt="MRI slices compared with a reconstructed three-dimensional tumor" width="1200" height="877" loading="lazy" decoding="async">
-        <img src="images/optimized/tumor-pipeline-720.webp" alt="Diagram of the MRI-to-3D-model processing pipeline" width="461" height="458" loading="lazy" decoding="async">
-      </div>
       <div class="project-dialog-content">
         <p class="project-kicker">Computational fabrication · Medical imaging</p>
         <h2 id="tumor-dialog-title">MRI-Based 3D Printed Tumor Models</h2>
         <p>Our project explored a new way for doctors to visualize tumors before operating on a patient. We built a pipeline that takes pre-segmented MRI scans, extrapolates and orients the individual slices, and interpolates the spaces between them before using Marching Cubes to generate a printable 3D mesh. Although our work focused specifically on brain tumors, the same process could be applied to other collections of segmented MRI scans to create physical models that make complex anatomy easier to inspect and understand.</p>
         <a class="text-link" href="https://gitlab.com/cs581/mri-tumor-data" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="project-dialog-gallery project-dialog-gallery-split">
+        <img src="images/optimized/mri-comparison-1200.webp" alt="MRI slices compared with a reconstructed three-dimensional tumor" width="1200" height="877" loading="lazy" decoding="async">
+        <img src="images/optimized/tumor-pipeline-720.webp" alt="Diagram of the MRI-to-3D-model processing pipeline" width="461" height="458" loading="lazy" decoding="async">
       </div>
     </div>
   </dialog>
@@ -388,12 +393,12 @@
   <dialog class="project-dialog" id="rocket-dialog" aria-labelledby="rocket-dialog-title">
     <div class="project-dialog-shell">
       <button class="dialog-close" type="button" data-dialog-close aria-label="Close BURPG IREC Rocket details">×</button>
-      <div class="project-dialog-gallery project-dialog-gallery-contain"><img src="images/optimized/irec-1200.webp" alt="BURPG IREC rocket avionics control panel" width="1200" height="1386" loading="lazy" decoding="async"></div>
       <div class="project-dialog-content">
         <p class="project-kicker">Embedded systems · Aerospace</p>
         <h2 id="rocket-dialog-title">BURPG IREC Rocket</h2>
         <p>I contributed to the design, production, testing, and debugging of a flight computer for the Boston University Rocket Propulsion Group’s IREC team. Built around a Teensy 4.1 microcontroller and a variety of Adafruit components, the system served as an integral part of the rocket’s avionics. It was responsible for coordinating critical flight functions, including recording and transmitting telemetry, controlling ejection charges, and supporting parachute deployment, all of which required the hardware and software to operate reliably under demanding flight conditions.</p>
       </div>
+      <div class="project-dialog-gallery project-dialog-gallery-contain"><img src="images/optimized/irec-1200.webp" alt="BURPG rocket airframe, Teensy flight computer, and inertial measurement unit" width="1200" height="1386" loading="lazy" decoding="async"></div>
     </div>
   </dialog>
 
@@ -437,52 +442,52 @@
   <dialog class="project-dialog" id="natura-dialog" aria-labelledby="natura-dialog-title">
     <div class="project-dialog-shell">
       <button class="dialog-close" type="button" data-dialog-close aria-label="Close Natura details">×</button>
-      <div class="project-dialog-gallery project-dialog-gallery-contain project-dialog-gallery-padded"><img src="images/optimized/natura-1200.webp" alt="Natura scenic route planner map and imagery interface" width="1200" height="1397" loading="lazy" decoding="async"></div>
       <div class="project-dialog-content">
         <p class="project-kicker">Geospatial software · Computer vision</p>
         <h2 id="natura-dialog-title">Natura</h2>
         <p>Natura is a scenic route planner MVP that turns open map data and street-level imagery into the most scenic drive between two points. It retrieves road data from OpenStreetMap, samples a uniform grid of locations, matches those samples to Mapillary images, and extracts simple visual cues from each image to estimate the surrounding scenery. The pipeline then builds a heatmap, uses it to score route alternatives produced by OSRM, and presents the results on an interactive map where users can compare routes, inspect imagery coverage, and rerun scenic routing without downloading the same images again.</p>
         <a class="text-link" href="https://github.com/LeozSola/Natura" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>
       </div>
+      <div class="project-dialog-gallery project-dialog-gallery-contain project-dialog-gallery-padded"><img src="images/optimized/natura-1200.webp" alt="Natura scenic route planner map and imagery interface" width="1200" height="1397" loading="lazy" decoding="async"></div>
     </div>
   </dialog>
 
   <dialog class="project-dialog" id="easynote-dialog" aria-labelledby="easynote-dialog-title">
     <div class="project-dialog-shell">
       <button class="dialog-close" type="button" data-dialog-close aria-label="Close EasyNote details">×</button>
-      <div class="project-dialog-gallery project-dialog-gallery-contain"><img src="images/optimized/easynote-1200.webp" alt="EasyNote project logo" width="1200" height="1386" loading="lazy" decoding="async"></div>
       <div class="project-dialog-content">
         <p class="project-kicker">Hackathon winner · Education software</p>
         <h2 id="easynote-dialog-title">EasyNote</h2>
         <p>I led a three-person development team in creating EasyNote, a Chrome extension designed to help students study more efficiently. The extension takes a YouTube video, uses the AssemblyAI API to process its content, and generates a comprehensive study guide that can be delivered through the Google Docs API. We combined Python, Node.js, and HTML to build the project and connect its different services into a practical workflow. Our work earned EasyNote a division win at the BostonHacks Hackathon.</p>
         <a class="text-link" href="https://devpost.com/software/easynote" target="_blank" rel="noopener noreferrer">View Devpost <span aria-hidden="true">↗</span></a>
       </div>
+      <div class="project-dialog-gallery project-dialog-gallery-contain"><img src="images/optimized/easynote-1200.webp" alt="EasyNote project logo" width="1200" height="1386" loading="lazy" decoding="async"></div>
     </div>
   </dialog>
 
   <dialog class="project-dialog" id="datathon-dialog" aria-labelledby="datathon-dialog-title">
     <div class="project-dialog-shell">
       <button class="dialog-close" type="button" data-dialog-close aria-label="Close Datathon Predictive Model details">×</button>
-      <div class="project-dialog-gallery"><img src="images/optimized/datathon-720.webp" alt="Datathon predictive-model data dashboard" width="611" height="673" loading="lazy" decoding="async"></div>
       <div class="project-dialog-content">
         <p class="project-kicker">Datathon project · Machine learning</p>
         <h2 id="datathon-dialog-title">Datathon Predictive Model</h2>
         <p>I worked with a team to analyze a real-world dataset and extract useful insights using pandas and scikit-learn. We applied the core stages of a machine-learning workflow, including data preparation, visualization, model implementation, and performance evaluation. Alongside the project, I attended data science and software engineering seminars that strengthened my understanding of these concepts and gave me an opportunity to apply them to a practical problem.</p>
         <a class="text-link" href="https://github.com/amv1225/MiniHacks2022" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>
       </div>
+      <div class="project-dialog-gallery"><img src="images/optimized/datathon-720.webp" alt="Datathon predictive-model data dashboard" width="611" height="673" loading="lazy" decoding="async"></div>
     </div>
   </dialog>
 
   <dialog class="project-dialog" id="chatgptinsta-dialog" aria-labelledby="chatgptinsta-dialog-title">
     <div class="project-dialog-shell">
       <button class="dialog-close" type="button" data-dialog-close aria-label="Close ChatGPTInsta details">×</button>
-      <div class="project-dialog-gallery">
-        <img src="images/optimized/chatgptinsta-1200.webp" alt="ChatGPTInsta application interface" width="1200" height="1386" loading="lazy" decoding="async">
-      </div>
       <div class="project-dialog-content">
         <p class="project-kicker">AI web application</p>
         <h2 id="chatgptinsta-dialog-title">ChatGPTInsta</h2>
         <p>ChatGPTInsta was created to help users streamline their social media presence with AI-generated content. I built an intuitive, visually engaging interface in React and connected it to ChatGPT through a Python backend, allowing users to submit prompts and receive generated captions, hashtags, and post descriptions. The project was also designed with future scheduling support in mind, giving users a path toward automatically publishing generated posts to Instagram instead of managing each post manually.</p>
+      </div>
+      <div class="project-dialog-gallery">
+        <img src="images/optimized/chatgptinsta-1200.webp" alt="ChatGPTInsta application interface" width="1200" height="1386" loading="lazy" decoding="async">
       </div>
     </div>
   </dialog>
